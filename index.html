@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Flashcards">
+<meta name="theme-color" content="#F7F3E6">
+<title>Flashcards — Medicina</title>
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='38' fill='%231B4D4A'/%3E%3Ctext x='90' y='118' font-size='90' text-anchor='middle' fill='%23F7F3E6' font-family='Georgia,serif'%3EF%3C/text%3E%3C/svg%3E">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap');
+  :root {
+    --ink: #1B4D4A;
+    --paper: #F7F3E6;
+    --rule: rgba(27,77,74,0.14);
+    --green: #8FBC5A;
+    --coral: #D9534F;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--ink);
+    background: repeating-linear-gradient(var(--paper), var(--paper) 30px, var(--rule) 31px);
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-top: env(safe-area-inset-top);
+  }
+  .container { max-width: 640px; margin: 0 auto; padding: 32px 20px 60px; }
+  .header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
+  .eyebrow { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(27,77,74,0.6); font-weight: 600; margin-bottom: 4px; }
+  h1.title { font-family: 'Caveat', cursive; font-size: 44px; font-weight: 700; margin: 0; line-height: 1; }
+  .subtle { font-size: 13px; color: rgba(27,77,74,0.65); margin-top: 4px; }
+  .error-text { font-size: 13px; color: var(--coral); margin-top: 10px; }
+  button { font-family: 'Inter', sans-serif; cursor: pointer; }
+  .btn-primary-icon { display: inline-flex; align-items: center; gap: 6px; background: var(--ink); color: var(--paper); border: none; border-radius: 3px; padding: 10px 16px; font-size: 13.5px; font-weight: 600; }
+  .deck-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .discipline-card { background: #FFFDF7; border: 1.5px solid var(--ink); border-radius: 4px; padding: 20px 22px; box-shadow: 3px 3px 0 rgba(27,77,74,0.15); position: relative; }
+  .tape { position: absolute; top: -14px; left: 20px; width: 52px; height: 16px; background: var(--green); opacity: 0.55; transform: rotate(-2deg); }
+  .discipline-name { font-family: 'Caveat', cursive; font-size: 32px; font-weight: 700; margin: 6px 0 6px 0; }
+  .deck-meta { display: flex; gap: 14px; font-size: 12.5px; color: rgba(27,77,74,0.7); margin-bottom: 14px; flex-wrap: wrap; }
+  .deck-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .btn-study { background: var(--ink); color: var(--paper); border: none; border-radius: 3px; padding: 9px 16px; font-size: 13.5px; font-weight: 600; }
+  .btn-study:disabled { background: transparent; color: rgba(27,77,74,0.4); border: 1.5px solid rgba(27,77,74,0.25); cursor: default; }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); border-radius: 3px; padding: 9px 14px; font-size: 13.5px; font-weight: 600; }
+  .btn-small-ghost { background: transparent; color: var(--ink); border: 1.5px solid rgba(27,77,74,0.35); border-radius: 3px; padding: 4px 7px; line-height: 0; }
+  .topic-list { border-top: 1px dashed rgba(27,77,74,0.25); padding-top: 12px; display: flex; flex-direction: column; gap: 6px; }
+  .topic-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 2px; }
+  .topic-row-name { font-size: 14px; font-weight: 600; display: block; }
+  .topic-row-meta { font-size: 12px; color: rgba(27,77,74,0.6); }
+  .add-topic-row { background: none; border: none; color: rgba(27,77,74,0.65); font-size: 12.5px; font-weight: 600; text-align: left; padding: 8px 2px 0; }
+  .empty-state { text-align: center; padding: 40px 0; color: rgba(27,77,74,0.6); }
+  .back-btn { display: inline-flex; align-items: center; gap: 2px; background: none; border: none; color: rgba(27,77,74,0.7); font-size: 13.5px; font-weight: 600; padding: 0; margin-bottom: 18px; }
+  label.field-label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(27,77,74,0.65); margin-bottom: 6px; margin-top: 12px; }
+  input.text-input, input.text-input-datalist { width: 100%; font-size: 16px; padding: 12px 14px; border: 1.5px solid var(--ink); border-radius: 3px; background: #FFFDF7; margin-bottom: 4px; color: var(--ink); font-family: 'Inter', sans-serif; }
+  textarea.text-area { width: 100%; font-size: 15px; padding: 10px 12px; border: 1.5px solid rgba(27,77,74,0.35); border-radius: 3px; resize: vertical; color: var(--ink); background: #FFFEFA; font-family: 'Inter', sans-serif; }
+  .btn-primary { background: var(--ink); color: var(--paper); border: none; border-radius: 3px; padding: 12px 20px; font-size: 14.5px; font-weight: 600; margin-top: 16px; }
+  .form-card { background: #FFFDF7; border: 1.5px solid var(--ink); border-radius: 4px; padding: 20px; box-shadow: 3px 3px 0 rgba(27,77,74,0.15); }
+  .card-list-item { font-size: 13.5px; padding: 8px 12px; border-left: 3px solid var(--green); background: rgba(143,188,90,0.08); margin-bottom: 6px; }
+  .study-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; flex-wrap: wrap; gap: 6px; }
+  .card-stage { perspective: 1200px; height: 300px; cursor: pointer; margin-bottom: 20px; }
+  .flashcard { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(.4,.2,.2,1); }
+  .flashcard.flipped { transform: rotateY(180deg); }
+  .card-face { position: absolute; inset: 0; backface-visibility: hidden; background: #FFFDF7; border: 2px solid var(--ink); border-radius: 6px; box-shadow: 4px 4px 0 rgba(27,77,74,0.18); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px; text-align: center; }
+  .card-face-back { transform: rotateY(180deg); background: #F1F6E9; }
+  .card-face-label { position: absolute; top: 16px; left: 20px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: rgba(27,77,74,0.5); }
+  .card-face-text { font-family: 'Caveat', cursive; font-size: 30px; font-weight: 600; line-height: 1.25; }
+  .tap-hint { position: absolute; bottom: 14px; font-size: 11.5px; color: rgba(27,77,74,0.45); }
+  .btn-flip { width: 100%; background: transparent; border: 1.5px solid var(--ink); color: var(--ink); border-radius: 4px; padding: 13px; font-size: 14.5px; font-weight: 600; }
+  .answer-row { display: flex; gap: 12px; }
+  .btn-wrong { flex: 1; background: #FFF5F4; border: 1.5px solid var(--coral); color: var(--coral); border-radius: 4px; padding: 13px; font-size: 14.5px; font-weight: 700; }
+  .btn-right { flex: 1; background: var(--green); border: 1.5px solid var(--ink); color: var(--ink); border-radius: 4px; padding: 13px; font-size: 14.5px; font-weight: 700; }
+  .done-wrap { text-align: center; padding: 40px 0; }
+  .done-emoji { font-size: 40px; color: var(--green); margin-bottom: 8px; }
+  .loading { padding: 40px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+const STORAGE_KEY = "flashcards_decks_v1";
+const SYNC_CONFIG_KEY = "flashcards_sync_config_v1";
+const INTERVALS = [0, 1, 3, 7, 14]; // dias
+
+function makeDeck(id, discipline, name, pairs) {
+  return {
+    id, discipline, name, createdAt: new Date().toISOString(),
+    cards: pairs.map(([front, back], i) => ({
+      id: `${id}-c${i}`, front, back, level: 1, nextReview: new Date().toISOString(),
+    })),
+  };
+}
+
+const DISCIPLINE_RENAMES = {
+  "Microbiologia": "Agente Hospedeiro I",
+};
+
+const SEED_DECKS = [
+  makeDeck("deck-microbio-1", "Agente Hospedeiro I", "Aula 1 — Conceitos e Morfologia", [
+    ["O que é microbiota?", "Conjunto de microrganismos presentes dentro de um hospedeiro."],
+    ["O que é microbioma?", "Conjunto e relação (quantidade, tipo, etc.) dos microrganismos dentro de um hospedeiro."],
+    ["O que caracteriza uma infecção endógena?", "O agente vem de DENTRO do próprio hospedeiro."],
+    ["O que caracteriza uma infecção exógena?", "O agente vem de FORA do hospedeiro."],
+    ["Como funciona a nomenclatura binomial de bactérias?", "2 palavras: 1ª = Gênero (maiúscula), 2ª = Espécie (minúscula)."],
+    ["Qual o tamanho aproximado das bactérias?", "Muito pequenas, cerca de 1 µm."],
+    ["Como se chamam as bactérias de forma arredondada?", "Cocos."],
+    ["Como se chamam as bactérias de forma alongada?", "Bacilos."],
+    ["Como se chamam as bactérias de forma ondulada?", "Espirilo ou vibrião."],
+    ["Como se chama o arranjo bacteriano em cacho?", "Estafilo (ex: estafilococo)."],
+    ["Como se chama o arranjo bacteriano em cadeia?", "Estrepto (ex: estreptococo)."],
+    ["Quais as funções da parede celular bacteriana?", "Dar forma à bactéria, participar da divisão celular, proteção mecânica, metabolismo de água livre e substrato para ação de antibióticos."],
+    ["Características da parede celular Gram-positiva?", "Não se descora, parede espessa, rica em glicopeptídeos; cora de AZUL no Gram."],
+    ["Características da parede celular Gram-negativa?", "Se descora (parede complexa), possui LPS, porinas e proteínas no espaço periplasmático; cora de VERMELHO no Gram."],
+    ["O que é o espaço periplasmático?", "Região entre as membranas que contém LPS, porinas, proteínas e enzimas (Gram-negativas)."],
+    ["Qual a função da membrana citoplasmática bacteriana?", "Transporte: difusão facilitada, transporte ativo e enzimas do metabolismo respiratório."],
+    ["Como é o citoplasma bacteriano?", "Hipertônico, granuloso, com cerca de 80% de água."],
+    ["Como é organizado o núcleo bacteriano?", "Disperso no citoplasma; DNA genômico é uma única molécula; pode haver plasmídeos."],
+    ["O que são plasmídeos?", "Moléculas circulares de DNA extracromossômico, capazes de autoduplicação."],
+    ["Qual a função dos esporos bacterianos?", "Formas de resistência da bactéria a condições adversas."],
+    ["Quais as duas funções de pili/fímbrias?", "Adesinas (adesão) e pili de conjugação (troca de material genético)."],
+    ["Como se classificam as bactérias quanto ao oxigênio?", "Aeróbio estrito, anaeróbio estrito, aeróbio facultativo, microaerófilo e anaeróbio aerotolerante."],
+  ]),
+  makeDeck("deck-canais-ionicos-1", "Saúde e Doença I", "Canais Iônicos e Potencial de Membrana", [
+    ["O que determina a seletividade de um canal iônico?", "A interação do íon com a água deve ser tão favorável quanto a interação com o filtro de seletividade do canal."],
+    ["O que significa um canal ser 'cátion seletivo'?", "Permite a passagem de cátions como Na+ e K+, gerando corrente."],
+    ["Como os canais iônicos alternam entre aberto e fechado?", "Oscilam aleatoriamente entre os dois estados."],
+    ["Quais os 4 estímulos que podem abrir um canal iônico (gating)?", "Alteração do potencial de membrana, ligante extracelular, ligante intracelular, deformação mecânica."],
+    ["O transporte por canais iônicos é passivo ou ativo?", "Passivo — a favor do gradiente."],
+    ["Como é o fluxo de íons por canais comparado a outros transportadores?", "Muito mais alto."],
+    ["Por que soluções intra e extracelulares neutras não geram diferença de potencial sozinhas?", "Só há diferença de potencial quando existem canais na membrana permitindo fluxo iônico."],
+    ["Quais as 3 premissas para existir diferença de potencial de membrana?", "Membrana isolante, bomba Na+/K+ (gera diferença de concentração), canais iônicos com permeabilidade diferente para diferentes íons."],
+    ["O que é a corrente capacitiva (Ic)?", "A corrente gerada enquanto a membrana está acumulando cargas, antes de atingir o potencial de repouso."],
+    ["No potencial de repouso estável, o que acontece com a corrente capacitiva?", "Deixa de existir — ainda há fluxo de íons, mas as correntes se anulam (INa + IK + IBomba = 0)."],
+    ["O que fornece a equação de Nernst?", "O potencial elétrico de equilíbrio equivalente à diferença de concentração de um íon específico."],
+    ["Segundo as notas, o K+ está perto ou longe do equilíbrio elétrico?", "Muito próximo do equilíbrio."],
+    ["E o Na+, está perto ou longe do equilíbrio elétrico?", "Muito atrasado (longe) do equilíbrio — por isso precisa ser transportado ativamente pela bomba Na+/K+."],
+    ["O que a equação de GHK calcula, diferente da de Nernst?", "O potencial de membrana (Vm) considerando permeabilidade e concentração de vários íons ao mesmo tempo, não só um."],
+    ["De que dois fatores depende o Vm calculado pela equação de GHK?", "Da razão de concentração intra/extracelular dos íons e da permeabilidade da membrana a cada um deles."],
+    ["O que acontece ao Vm quando aumenta a permeabilidade ao K+?", "Fica mais negativo (sai mais K+ da célula)."],
+    ["O que acontece ao Vm quando diminui a permeabilidade ao K+?", "Fica menos negativo (entra mais K+ líquido na célula)."],
+    ["O que acontece ao Vm quando aumenta a permeabilidade ao Na+?", "Fica menos negativo — entra mais Na+ na célula."],
+    ["Por que uma alteração no Na+ extracelular quase não muda o Vm de repouso?", "Porque a permeabilidade de repouso ao Na+ (P_Na) é muito baixa, então seu efeito sobre a corrente de Na+ é pequeno."],
+    ["O que acontece ao Vm quando aumenta o K+ extracelular?", "Fica menos negativo (despolariza) — reduz a saída de K+."],
+    ["O que acontece ao Vm quando diminui o K+ extracelular?", "Fica mais negativo (hiperpolariza) — aumenta a saída de K+."],
+  ]),
+  makeDeck("deck-compartimentos-1", "Saúde e Doença I", "Compartimentos e Mecanismos de Controle", [
+    ["O que é homeostase?", "Manutenção da estabilidade do meio interno."],
+    ["Que fração do peso corporal é água?", "Cerca de 60%."],
+    ["Como a água corporal se distribui entre os compartimentos?", "2/3 no intracelular e 1/3 no extracelular."],
+    ["Como são as soluções corporais do ponto de vista eletroquímico?", "Macroscopicamente eletroneutras."],
+    ["Quais as duas formas de estimar a osmolalidade plasmática a partir do Na+?", "Duplicar a concentração de Na+ (Na×2), ou usar Osmolalidade = Na×2 + glicose/18 + ureia/6."],
+    ["O que caracteriza um parâmetro regulado por feedback negativo?", "Permanece constante, tem um set point, varia pouco, e é corrigido tanto pra cima quanto pra baixo."],
+    ["O que caracteriza o feedback positivo?", "É transitório, tem um end point, e é regulado externamente ou por saturação."],
+    ["No balanço positivo, o que ocorre com a substância no organismo?", "Sua quantidade aumenta (entrada maior que a saída)."],
+    ["No balanço negativo, o que ocorre?", "A quantidade diminui (saída maior que a entrada)."],
+    ["Quais os componentes do fluxograma de feedback negativo?", "Set point → Erro → Controlador → Efetor → Processo → Variável controlada → Sensor → (retorna ao erro)."],
+    ["No feedback negativo, o que o sensor faz com a variável controlada?", "Mede a variação da variável em torno do set point e informa o controlador."],
+    ["O que é o 'erro' no fluxograma de feedback negativo?", "A diferença entre o set point e o valor medido pelo sensor."],
+    ["No feedback positivo, o que substitui o 'set point' do feedback negativo?", "Um estímulo inicial ('início'); o processo caminha até um end point, não até um valor fixo constante."],
+    ["Como o sinal do sensor se comporta no feedback positivo, comparado ao negativo?", "No positivo, reforça o estímulo inicial e amplifica o processo até o end point; no negativo, gera correção que reduz o erro."],
+    ["Quanto mais preciso o sistema de correção, o que acontece com o ganho do sistema?", "Maior o ganho — correção mais efetiva e menor erro residual."],
+  ]),
+  makeDeck("deck-fluxo-agua-1", "Saúde e Doença I", "Fluxo de Água e Tonicidade", [
+    ["O que é o coeficiente de reflexão (σ)?", "Define o efeito osmótico de um soluto frente a uma membrana (0 ≤ σ ≤ 1)."],
+    ["Qual o valor de σ para um soluto totalmente permeante?", "0."],
+    ["Qual o valor de σ para um soluto totalmente impermeante?", "1."],
+    ["Por que o Na+ é considerado impermeante (σ=1) mesmo entrando na célula?", "Porque o Na+ que entra é bombeado de volta para fora pela Na+/K+-ATPase."],
+    ["Qual a fórmula da pressão osmótica efetiva?", "π = σ × R × T × Δc(osm)."],
+    ["Como se distribuem 1,5 L de água pura ingerida no organismo?", "2/3 para o intracelular e 1/3 para o extracelular."],
+    ["Como se distribui um volume igual de solução isotônica (ex: soro/Gatorade)?", "Fica todo no compartimento extracelular."],
+    ["Quais são as duas forças de Starling?", "ΔP (diferença de pressão hidrostática) e Δπ (diferença de pressão oncótica) entre capilar e interstício."],
+    ["Qual soluto é o principal responsável pela pressão oncótica capilar?", "As proteínas plasmáticas, principalmente a albumina."],
+    ["Qual a fórmula do fluxo de água através da parede capilar?", "Fluxo = Kf × (ΔP − Δπ)."],
+  ]),
+  makeDeck("deck-transportes-1", "Saúde e Doença I", "Transportes Passivos e Ativos", [
+    ["O que é difusão simples?", "Movimento térmico aleatório das moléculas a favor do gradiente de concentração, sem gasto de energia."],
+    ["Quais os 3 fatores que afetam o coeficiente de difusão (D)?", "Temperatura, tamanho da molécula e resistência (viscosidade) do meio."],
+    ["Que tipo de moléculas atravessam a membrana por difusão simples?", "Moléculas lipossolúveis e pequenas."],
+    ["O que significa 'independência de fluxos' na difusão simples?", "Uma molécula não impacta o fluxo de outra."],
+    ["O que é difusão facilitada?", "Transporte passivo por carreadores, a favor do gradiente de potencial químico, para substâncias polares com baixo coeficiente de partição."],
+    ["A difusão facilitada tem independência de fluxos?", "Não — ao contrário da difusão simples, ela satura."],
+    ["O que é Km de um carreador?", "Medida inversa de afinidade: quanto menor o Km, maior a afinidade do carreador pelo substrato."],
+    ["O que é Vmax de um carreador?", "A velocidade máxima de transporte, que depende do número de carreadores e sua cinética."],
+    ["O que caracteriza o transporte ativo primário?", "Transporte contra o gradiente, com gasto direto de ATP, sempre envolvendo mudança de afinidade da substância transportadora."],
+    ["Quais as duas subunidades da Na+/K+-ATPase?", "Alfa (transportadora) e Beta (regulatória)."],
+    ["O que caracteriza o transporte ativo secundário?", "Transporte de uma substância contra sua direção espontânea, usando o gradiente gerado por outro transporte ativo primário (transporte acoplado)."],
+    ["Dê um exemplo de transporte ativo secundário citado nas notas.", "SGLT — cotransporte de Na+ e glicose."],
+  ]),
+  makeDeck("deck-imune-organos-1", "Agente Hospedeiro I", "Sistema Imune I e Órgãos Linfoides", [
+    ["Qual a diferença entre imunização ativa e passiva?", "Ativa induz a resposta no próprio imunizado; passiva entrega a resposta imune pronta (anticorpos)."],
+    ["Dê exemplos de imunização ativa.", "Vacinas e a própria doença."],
+    ["Dê exemplos de imunização passiva.", "Soro e amamentação."],
+    ["Desde quando a imunidade inata funciona?", "Desde o nascimento."],
+    ["A imunidade adaptativa funciona desde o nascimento?", "Não — precisa de exposição prévia ao antígeno para funcionar."],
+    ["Como é a velocidade da resposta imune inata?", "Rápida."],
+    ["Como é a especificidade da resposta imune adaptativa?", "Específica."],
+    ["O que a imunidade adaptativa gera, diferente da inata?", "Memória imunológica."],
+    ["Qual a origem da imunidade humoral?", "Linfócitos B."],
+    ["Qual a origem da imunidade celular?", "Linfócitos T."],
+    ["O que a imunidade humoral faz?", "Bloqueio de infecções e eliminação de microrganismos extracelulares."],
+    ["O que fazem os linfócitos T CD4?", "Sinalizam por citocinas (ajudam a eliminar microrganismos fagocitados)."],
+    ["O que fazem os linfócitos T CD8?", "São citotóxicos — promovem a morte de células infectadas."],
+    ["O que caracteriza a resposta imune primária?", "Ocorre após a primeira exposição ao antígeno e produz memória imune."],
+    ["O que caracteriza a resposta imune secundária?", "É mais rápida e intensa, e melhora a memória imune."],
+    ["Quais são os órgãos linfoides primários?", "Timo e medula óssea."],
+    ["O que os órgãos linfoides primários fazem?", "Geram os linfócitos."],
+    ["Quais são os órgãos linfoides secundários?", "Linfonodos, baço e MALT."],
+    ["O que os órgãos linfoides secundários fazem?", "Armazenam os linfócitos; é onde ocorre o reconhecimento dos antígenos."],
+    ["Que tipo de antígeno os linfonodos reconhecem?", "Antígenos teciduais."],
+    ["Que tipo de antígeno o baço reconhece?", "Antígenos sanguíneos."],
+  ]),
+  makeDeck("deck-diag-microbio-1", "Agente Hospedeiro I", "Diagnóstico Microbiológico", [
+    ["O que é a bacterioscopia?", "Visualização direta da amostra por coloração de Gram."],
+    ["Como aparecem as bactérias Gram-positivas na coloração de Gram?", "Azuis, com parede espessa e muito peptideoglicano."],
+    ["Como aparecem as bactérias Gram-negativas na coloração de Gram?", "Vermelhas, com parede complexa e pouco peptideoglicano."],
+    ["Quais amostras de trato respiratório são citadas para diagnóstico?", "Escarro e lavagem broncoalveolar (LBA)."],
+    ["Para que serve a cultura no diagnóstico microbiológico?", "Utiliza-se um meio de cultura ideal para as bactérias da amostra se multiplicarem."],
+    ["O que é um meio de cultura enriquecido?", "Mais geral, usado para multiplicar patógenos em geral."],
+    ["O que é um meio de cultura seletivo?", "Usado quando há um grupo de patógenos, para multiplicar apenas 1 tipo."],
+    ["O que é um meio de cultura diferencial?", "Usado quando há um grupo de patógenos e se quer separá-los em diferentes grupos."],
+    ["Quais as 3 formas físicas dos meios de cultura?", "Líquido, sólido e semi-sólido."],
+    ["Em que meio se faz a cultura geral?", "Ágar sangue/chocolate."],
+    ["Qual o nome da cultura de fezes?", "Coprocultura (meios seletivos)."],
+    ["Qual o nome da cultura de urina?", "Urocultura."],
+    ["Qual o nome da cultura de sangue?", "Hemocultura."],
+    ["Que agentes precisam de meios de cultura especiais?", "Micobactérias e Legionella."],
+    ["Quais as 3 provas bioquímicas citadas para identificação do agente?", "Catalase, coagulase e oxidase."],
+    ["Quanto tempo levam as provas bioquímicas manuais/automáticas?", "Cerca de 12 a 24h."],
+    ["Qual método de identificação do agente é mais rápido que as provas bioquímicas?", "Espectrometria de massa (leva minutos)."],
+    ["Qual o principal método de detecção de antígenos?", "Imunocromatografia."],
+    ["O que caracteriza os métodos moleculares de diagnóstico?", "Fazem tudo de uma vez (detectam DNA/RNA do agente rapidamente)."],
+    ["Qual a diferença entre método molecular isolado e painel?", "Isolado identifica um único patógeno; painel identifica várias possibilidades de patógenos ao mesmo tempo (ex: painel respiratório, pneumonia)."],
+    ["Segundo a tabela comparativa das notas, qual método tem o resultado mais rápido?", "Imunocromatográficos (10–30 minutos)."],
+    ["Qual método é a principal fonte para o antibiograma (teste de sensibilidade)?", "A cultura."],
+    ["Qual a limitação principal dos métodos moleculares, segundo a tabela?", "Custo alto, e podem detectar o agente mesmo que não esteja viável."],
+    ["Paciente de 48 anos, UTI, suspeita de infecção respiratória — qual teste é mais indicado para esclarecer a etiologia e guiar a terapêutica?", "Método molecular."],
+  ]),
+];
+
+function isDue(card) { return new Date(card.nextReview).getTime() <= Date.now(); }
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+function esc(s) {
+  return String(s).replace(/[&<>"']/g, (m) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]));
+}
+
+// ---- state ----
+let decks = {};
+let screen = "home";
+let activeDeckId = null;
+let activeDiscipline = null;
+let queue = [];
+let flipped = false;
+let sessionDone = 0;
+let saveError = false;
+let formFront = "", formBack = "";
+let formTopic = "", formDiscipline = "";
+
+// Merges an array of seed-shaped decks into an existing decks object.
+// Adds missing decks whole; adds missing cards (by id) to decks that already exist.
+// Returns { merged, changed }.
+function mergeSeedDecksInto(existingDecks, seedArray) {
+  let existing = { ...existingDecks };
+  let changed = false;
+  for (const deck of seedArray) {
+    if (!existing[deck.id]) {
+      existing[deck.id] = deck;
+      changed = true;
+    } else {
+      const existingIds = new Set(existing[deck.id].cards.map(c => c.id));
+      const newCards = deck.cards.filter(c => !existingIds.has(c.id));
+      if (newCards.length > 0) {
+        existing[deck.id] = { ...existing[deck.id], cards: [...existing[deck.id].cards, ...newCards] };
+        changed = true;
+      }
+      if (!existing[deck.id].discipline) {
+        existing[deck.id] = { ...existing[deck.id], discipline: deck.discipline };
+        changed = true;
+      }
+    }
+  }
+  for (const id of Object.keys(existing)) {
+    const currentDiscipline = existing[id].discipline;
+    if (currentDiscipline && DISCIPLINE_RENAMES[currentDiscipline]) {
+      existing[id] = { ...existing[id], discipline: DISCIPLINE_RENAMES[currentDiscipline] };
+      changed = true;
+    }
+  }
+  return { merged: existing, changed };
+}
+
+function loadDecks() {
+  let existing = {};
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) existing = JSON.parse(raw);
+  } catch (e) { existing = {}; }
+  const { merged, changed } = mergeSeedDecksInto(existing, SEED_DECKS);
+  decks = merged;
+  if (changed) saveDecks();
+}
+
+const DEFAULT_DATA_URL = "flashcards-data.json"; // same-origin file, if present alongside this page
+
+function getSyncConfig() {
+  try {
+    const raw = localStorage.getItem(SYNC_CONFIG_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      if (parsed.gistUrl) return parsed;
+    }
+  } catch (e) {}
+  return { gistUrl: DEFAULT_DATA_URL, lastSynced: null, isDefault: true };
+}
+
+function saveSyncConfig(cfg) {
+  try { localStorage.setItem(SYNC_CONFIG_KEY, JSON.stringify(cfg)); } catch (e) {}
+}
+
+// Converts the simple {"decks":[{id,discipline,name,cards:[[front,back],...]}]}
+// JSON format (the format used in the Gist) into deck objects with stable card ids.
+function parseRemoteDecks(json) {
+  if (!json || !Array.isArray(json.decks)) return [];
+  return json.decks.map(d => makeDeck(d.id, d.discipline, d.name, d.cards || []));
+}
+
+let syncStatus = null; // null | "syncing" | "ok" | "error" | "no-url"
+
+async function syncFromRemote(manual) {
+  const cfg = getSyncConfig();
+  if (!cfg.gistUrl) {
+    syncStatus = "no-url";
+    if (manual) render();
+    return;
+  }
+  syncStatus = "syncing";
+  if (manual) render();
+  try {
+    const res = await fetch(cfg.gistUrl, { cache: "no-store" });
+    if (!res.ok) throw new Error("bad response");
+    const json = await res.json();
+    const remoteDecks = parseRemoteDecks(json);
+    const { merged, changed } = mergeSeedDecksInto(decks, remoteDecks);
+    decks = merged;
+    if (changed) saveDecks();
+    cfg.lastSynced = new Date().toISOString();
+    saveSyncConfig(cfg);
+    syncStatus = "ok";
+  } catch (e) {
+    syncStatus = "error";
+  }
+  render();
+}
+
+function saveDecks() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(decks));
+    saveError = false;
+  } catch (e) {
+    saveError = true;
+  }
+}
+
+function startStudy(discipline, cramAll) {
+  const deckIds = Object.values(decks).filter(d => d.discipline === discipline).map(d => d.id);
+  let pool = [];
+  deckIds.forEach(id => {
+    const deck = decks[id];
+    const cards = cramAll ? deck.cards : deck.cards.filter(isDue);
+    cards.forEach(c => pool.push({ ...c, _deckId: id }));
+  });
+  if (pool.length === 0) return;
+  activeDiscipline = discipline;
+  queue = shuffle(pool);
+  sessionDone = 0;
+  flipped = false;
+  screen = "study";
+  render();
+}
+
+function answerCard(knew) {
+  const current = queue[0];
+  const rest = queue.slice(1);
+  const deck = decks[current._deckId];
+  const level = knew ? Math.min(current.level + 1, INTERVALS.length) : 1;
+  const days = INTERVALS[level - 1];
+  const nextReview = new Date(Date.now() + days * 86400000).toISOString();
+  const cleanCard = { id: current.id, front: current.front, back: current.back, level, nextReview };
+  const updatedCards = deck.cards.map(c => c.id === current.id ? cleanCard : c);
+  decks[current._deckId] = { ...deck, cards: updatedCards };
+  saveDecks();
+  sessionDone += 1;
+  flipped = false;
+  queue = knew ? rest : [...rest, { ...cleanCard, _deckId: current._deckId }];
+  render();
+}
+
+function addCard() {
+  if (!formFront.trim() || !formBack.trim()) return;
+  const deck = decks[activeDeckId];
+  const card = { id: `c-${Date.now()}`, front: formFront.trim(), back: formBack.trim(), level: 1, nextReview: new Date().toISOString() };
+  decks[activeDeckId] = { ...deck, cards: [...deck.cards, card] };
+  saveDecks();
+  formFront = ""; formBack = "";
+  render();
+}
+
+function addTopic() {
+  if (!formTopic.trim() || !formDiscipline.trim()) return;
+  const id = `deck-${Date.now()}`;
+  decks[id] = { id, discipline: formDiscipline.trim(), name: formTopic.trim(), createdAt: new Date().toISOString(), cards: [] };
+  saveDecks();
+  formTopic = ""; formDiscipline = "";
+  activeDeckId = id;
+  screen = "add";
+  render();
+}
+
+// ---- rendering ----
+function render() {
+  const app = document.getElementById("app");
+  if (screen === "home") app.innerHTML = renderHome();
+  else if (screen === "newTopic") app.innerHTML = renderNewTopic();
+  else if (screen === "add") app.innerHTML = renderAdd();
+  else if (screen === "study") app.innerHTML = renderStudy();
+  else if (screen === "settings") app.innerHTML = renderSettings();
+  attachHandlers();
+}
+
+function renderHome() {
+  const deckList = Object.values(decks).sort((a,b) => new Date(a.createdAt) - new Date(b.createdAt));
+  const groups = {};
+  deckList.forEach(d => {
+    const key = d.discipline || "Sem disciplina";
+    (groups[key] = groups[key] || []).push(d);
+  });
+  const disciplineNames = Object.keys(groups).sort((a,b) => new Date(groups[a][0].createdAt) - new Date(groups[b][0].createdAt));
+
+  if (disciplineNames.length === 0) {
+    return `
+      <div class="container">
+        <div class="header">
+          <div><div class="eyebrow">caderno de flashcards</div><h1 class="title">Suas disciplinas</h1></div>
+          <div style="display:flex; gap:8px; align-items:center;">
+            <button class="btn-ghost" data-action="open-settings" title="Sincronização">⚙︎ sincronizar</button>
+            <button class="btn-primary-icon" data-action="new-topic">+ novo tópico</button>
+          </div>
+        </div>
+        ${renderSyncPill()}
+        <div class="empty-state">Nenhuma disciplina ainda. Crie um tópico pra começar.</div>
+      </div>`;
+  }
+
+  const cards = disciplineNames.map(discipline => {
+    const topics = groups[discipline];
+    const totalCards = topics.reduce((s,t) => s + t.cards.length, 0);
+    const totalDue = topics.reduce((s,t) => s + t.cards.filter(isDue).length, 0);
+    const mastered = topics.reduce((s,t) => s + t.cards.filter(c => c.level >= 5).length, 0);
+    const topicRows = topics.map(t => {
+      const due = t.cards.filter(isDue).length;
+      return `
+        <div class="topic-row">
+          <div>
+            <span class="topic-row-name">${esc(t.name)}</span><br/>
+            <span class="topic-row-meta">${t.cards.length} cards${due > 0 ? ` · ${due} pra hoje` : ""}</span>
+          </div>
+          <button class="btn-small-ghost" data-action="add-to-topic" data-deck="${t.id}">+</button>
+        </div>`;
+    }).join("");
+
+    return `
+      <div class="discipline-card">
+        <div class="tape"></div>
+        <h2 class="discipline-name">${esc(discipline)}</h2>
+        <div class="deck-meta">
+          <span>${totalCards} cards · ${topics.length} tópico(s)</span>
+          ${mastered > 0 ? `<span>🔥 ${mastered} dominados</span>` : ""}
+        </div>
+        <div class="deck-actions">
+          <button class="btn-study" ${totalDue === 0 ? "disabled" : ""} data-action="study" data-discipline="${esc(discipline)}" data-cram="false">
+            ${totalDue > 0 ? `revisar disciplina (${totalDue})` : "tudo em dia"}
+          </button>
+          ${totalCards > 0 ? `<button class="btn-ghost" data-action="study" data-discipline="${esc(discipline)}" data-cram="true">revisar tudo</button>` : ""}
+        </div>
+        <div class="topic-list">
+          ${topicRows}
+          <button class="add-topic-row" data-action="new-topic" data-discipline="${esc(discipline)}">+ novo tópico em ${esc(discipline)}</button>
+        </div>
+      </div>`;
+  }).join("");
+
+  return `
+    <div class="container">
+      <div class="header">
+        <div><div class="eyebrow">caderno de flashcards</div><h1 class="title">Suas disciplinas</h1></div>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <button class="btn-ghost" data-action="open-settings" title="Sincronização">⚙︎ sincronizar</button>
+          <button class="btn-primary-icon" data-action="new-topic">+ novo tópico</button>
+        </div>
+      </div>
+      ${renderSyncPill()}
+      <div class="deck-grid">${cards}</div>
+    </div>`;
+}
+
+function renderSyncPill() {
+  if (!syncStatus) return "";
+  const cfg = getSyncConfig();
+  const map = {
+    syncing: { text: "Sincronizando…", color: "rgba(27,77,74,0.65)" },
+    ok: { text: `Sincronizado${cfg.lastSynced ? " · " + new Date(cfg.lastSynced).toLocaleString("pt-BR") : ""}`, color: "#3f7d4a" },
+    error: { text: "Não consegui sincronizar agora (sem internet ou link inválido)", color: "#D9534F" },
+    "no-url": { text: "Sincronização não configurada ainda", color: "rgba(27,77,74,0.5)" },
+  };
+  const info = map[syncStatus];
+  if (!info) return "";
+  return `<div class="subtle" style="margin:-14px 0 18px; color:${info.color}">${info.text}</div>`;
+}
+
+function renderSettings() {
+  const cfg = getSyncConfig();
+  return `
+    <div class="container">
+      <button class="back-btn" data-action="go-home">‹ voltar</button>
+      <h1 class="title">Sincronização</h1>
+      <p class="subtle">Por padrão o app busca o arquivo <code>flashcards-data.json</code> hospedado junto com esta página. Se você preferir usar outra fonte (ex: um Gist), pode sobrescrever a URL abaixo.</p>
+      <label class="field-label">URL ou caminho do arquivo JSON</label>
+      <input class="text-input" id="input-gist-url" placeholder="flashcards-data.json" value="${esc(cfg.isDefault ? "" : (cfg.gistUrl || ""))}" />
+      <button class="btn-primary" data-action="save-sync-config">salvar e sincronizar agora</button>
+      <button class="btn-ghost" data-action="sync-now" style="margin-top:8px">sincronizar agora (sem alterar)</button>
+      ${renderSyncPill()}
+      ${cfg.lastSynced ? `<p class="subtle">Última sincronização: ${new Date(cfg.lastSynced).toLocaleString("pt-BR")}</p>` : ""}
+    </div>`;
+}
+
+function renderNewTopic() {
+  const existingDisciplines = [...new Set(Object.values(decks).map(d => d.discipline))];
+  return `
+    <div class="container">
+      <button class="back-btn" data-action="go-home">‹ voltar</button>
+      <h1 class="title">Novo tópico</h1>
+      <p class="subtle">Tópicos da mesma disciplina são revisados juntos.</p>
+      <label class="field-label">Disciplina</label>
+      <input class="text-input" id="input-discipline" placeholder="ex: Saúde e Doença I" value="${esc(formDiscipline)}" list="discipline-options" />
+      <datalist id="discipline-options">${existingDisciplines.map(d => `<option value="${esc(d)}">`).join("")}</datalist>
+      <label class="field-label">Tópico / aula</label>
+      <input class="text-input" id="input-topic" placeholder="ex: Sistema Complemento" value="${esc(formTopic)}" />
+      <button class="btn-primary" data-action="create-topic">criar tópico →</button>
+    </div>`;
+}
+
+function renderAdd() {
+  const deck = decks[activeDeckId];
+  const cardItems = [...deck.cards].reverse().slice(0,6).map(c => `<div class="card-list-item">${esc(c.front)}</div>`).join("");
+  return `
+    <div class="container">
+      <button class="back-btn" data-action="go-home">‹ voltar</button>
+      <div class="eyebrow">${esc(deck.discipline)} · ${esc(deck.name)}</div>
+      <h1 class="title">Adicionar card</h1>
+      <div class="form-card">
+        <label class="field-label">Frente (pergunta)</label>
+        <textarea class="text-area" id="input-front" rows="2" placeholder="O que é...">${esc(formFront)}</textarea>
+        <label class="field-label">Verso (resposta)</label>
+        <textarea class="text-area" id="input-back" rows="3" placeholder="Resposta...">${esc(formBack)}</textarea>
+        <button class="btn-primary" data-action="add-card">+ adicionar ao tópico</button>
+        ${saveError ? `<div class="error-text">Não consegui salvar agora — tente de novo.</div>` : ""}
+      </div>
+      ${deck.cards.length > 0 ? `
+        <div style="margin-top:28px">
+          <div class="subtle">${deck.cards.length} card(s) neste tópico</div>
+          <div style="margin-top:10px">${cardItems}</div>
+        </div>` : ""}
+    </div>`;
+}
+
+function renderStudy() {
+  if (queue.length === 0) {
+    return `
+      <div class="container">
+        <button class="back-btn" data-action="go-home">‹ voltar às disciplinas</button>
+        <div class="done-wrap">
+          <div class="done-emoji">✓</div>
+          <h1 class="title">Sessão concluída</h1>
+          <p class="subtle">${sessionDone} card(s) revisados. Bom trabalho.</p>
+          <button class="btn-primary" data-action="go-home">voltar às disciplinas</button>
+        </div>
+      </div>`;
+  }
+  const current = queue[0];
+  return `
+    <div class="container">
+      <button class="back-btn" data-action="go-home">‹ sair</button>
+      <div class="study-header">
+        <div class="eyebrow">${esc(activeDiscipline)}</div>
+        <div class="subtle">${queue.length} restante(s) · ${sessionDone} feito(s)</div>
+      </div>
+      <div class="card-stage" data-action="flip">
+        <div class="flashcard ${flipped ? "flipped" : ""}">
+          <div class="card-face">
+            <div class="card-face-label">pergunta</div>
+            <div class="card-face-text">${esc(current.front)}</div>
+            <div class="tap-hint">toque para virar</div>
+          </div>
+          <div class="card-face card-face-back">
+            <div class="card-face-label">resposta</div>
+            <div class="card-face-text">${esc(current.back)}</div>
+          </div>
+        </div>
+      </div>
+      ${!flipped
+        ? `<button class="btn-flip" data-action="flip">↻ virar card</button>`
+        : `<div class="answer-row">
+             <button class="btn-wrong" data-action="answer" data-knew="false">✕ não sabia</button>
+             <button class="btn-right" data-action="answer" data-knew="true">✓ sabia</button>
+           </div>`}
+    </div>`;
+}
+
+function attachHandlers() {
+  document.querySelectorAll('[data-action]').forEach(el => {
+    el.addEventListener('click', (e) => {
+      const action = el.getAttribute('data-action');
+      if (action === "new-topic") {
+        formDiscipline = el.getAttribute('data-discipline') || "";
+        formTopic = "";
+        screen = "newTopic";
+        render();
+      } else if (action === "go-home") {
+        screen = "home";
+        render();
+      } else if (action === "add-to-topic") {
+        activeDeckId = el.getAttribute('data-deck');
+        formFront = ""; formBack = "";
+        screen = "add";
+        render();
+      } else if (action === "study") {
+        const discipline = el.getAttribute('data-discipline');
+        const cram = el.getAttribute('data-cram') === "true";
+        startStudy(discipline, cram);
+      } else if (action === "create-topic") {
+        formDiscipline = document.getElementById('input-discipline').value;
+        formTopic = document.getElementById('input-topic').value;
+        addTopic();
+      } else if (action === "add-card") {
+        formFront = document.getElementById('input-front').value;
+        formBack = document.getElementById('input-back').value;
+        addCard();
+      } else if (action === "flip") {
+        flipped = !flipped;
+        render();
+      } else if (action === "answer") {
+        answerCard(el.getAttribute('data-knew') === "true");
+      } else if (action === "open-settings") {
+        screen = "settings";
+        render();
+      } else if (action === "save-sync-config") {
+        const url = document.getElementById('input-gist-url').value.trim();
+        if (url) {
+          saveSyncConfig({ gistUrl: url, lastSynced: getSyncConfig().lastSynced });
+        } else {
+          try { localStorage.removeItem(SYNC_CONFIG_KEY); } catch (e) {}
+        }
+        syncFromRemote(true);
+      } else if (action === "sync-now") {
+        syncFromRemote(true);
+      }
+    });
+  });
+}
+
+loadDecks();
+render();
+syncFromRemote(false);
+</script>
+</body>
+</html>
