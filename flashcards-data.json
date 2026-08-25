@@ -55,5 +55,289 @@
         ["No reflexo patelar, por que a via para o neurônio motor extensor tem menor latência que a via para o flexor?", "Porque a via extensora é monossináptica (direta), enquanto a via para o flexor passa por um interneurônio inibitório adicional (disináptica) — inibição recíproca, com mais uma sinapse e mais atraso."]
       ]
     }
+  ]{
+  "decks": [
+    {
+      "id": "deck-mccp-1",
+      "discipline": "Atenção Primária à Saúde III",
+      "name": "MCCP e ROP",
+      "cards": [
+        [
+          "O que significa a sigla MCCP?",
+          "Método Clínico Centrado na Pessoa."
+        ],
+        [
+          "Quantos componentes tem o MCCP?",
+          "4."
+        ],
+        [
+          "Qual o componente 1 do MCCP?",
+          "Explorando a Saúde, a Doença e a Experiência da Doença."
+        ],
+        [
+          "O que envolve o componente 1 do MCCP?",
+          "Percepções de saúde e doença pessoais; histórico, exame físico e complementares; e o SIFE."
+        ],
+        [
+          "O que significa a sigla SIFE?",
+          "Sentimentos, Ideias, Função (impacto na vida) e Expectativas do paciente sobre a doença."
+        ],
+        [
+          "Qual o componente 2 do MCCP?",
+          "Entendendo a Pessoa como um Todo."
+        ],
+        [
+          "O que compõe o componente 2 do MCCP?",
+          "A pessoa (história de vida, questões pessoais), o contexto próximo (família, trabalho) e o contexto amplo (cultura, comunidade, ecossistema)."
+        ],
+        [
+          "Qual o componente 3 do MCCP?",
+          "Elaborando um Plano Conjunto de Manejo dos Problemas."
+        ],
+        [
+          "O que inclui o componente 3 do MCCP?",
+          "Problemas e prioridades, metas do tratamento/manejo, e papéis da pessoa e do médico."
+        ],
+        [
+          "Qual o componente 4 do MCCP?",
+          "Intensificando a Relação entre a Pessoa e o Médico."
+        ],
+        [
+          "O que inclui o componente 4 do MCCP?",
+          "Compaixão e empatia, cura e esperança, transferência e contratransferência."
+        ],
+        [
+          "O que é o ROP?",
+          "Registro Orientado por Problema — a forma de registro que espelha a forma de raciocínio clínico."
+        ],
+        [
+          "Quais os componentes do ROP?",
+          "Lista de Problemas ou Condições (LP) e o SOAP."
+        ],
+        [
+          "O que significa cada letra do SOAP?",
+          "S (Subjetivo), O (Objetivo), A (Avaliação), P (Plano)."
+        ],
+        [
+          "O que entra no campo Subjetivo do SOAP?",
+          "Sintomas e diagnósticos relatados, história familiar/social/passada, contexto, e o SIFE (expectativas, medos, angústias)."
+        ],
+        [
+          "O que entra no campo Objetivo do SOAP?",
+          "Observações do profissional, achados físicos, dados de exame clínico e exames complementares."
+        ],
+        [
+          "O que entra no campo Avaliação do SOAP?",
+          "Os problemas (fatos e dados relevantes até o diagnóstico), situação atual de problema crônico, e impressão do médico sobre o caso."
+        ],
+        [
+          "O que entra no campo Plano do SOAP?",
+          "Plano diagnóstico, terapêutico, de acompanhamento, educativo e de estudo."
+        ]
+      ]
+    },
+    {
+      "id": "deck-mev-1",
+      "discipline": "Atenção Primária à Saúde III",
+      "name": "Mudanças de Estilo de Vida (MEV) e Dislipidemia",
+      "cards": [
+        [
+          "O que é o Modelo de Prochaska e DiClemente?",
+          "Um modelo que conceitua mudanças em nível de pessoa, inicialmente usado para adição (tabagismo, alcoolismo)."
+        ],
+        [
+          "O que caracteriza o estágio de pré-contemplação?",
+          "A pessoa não considera mudar e nem se preocupa com o problema."
+        ],
+        [
+          "O que caracteriza o estágio de contemplação?",
+          "A pessoa admite o problema, mas é ambivalente; pode mudar nos próximos 6 meses."
+        ],
+        [
+          "O que caracteriza o estágio de preparação?",
+          "A pessoa planeja, cria condições e revisa tentativas passadas; pode mudar nos próximos 30 dias — precisa de atenção rápida do médico."
+        ],
+        [
+          "O que caracteriza o estágio de ação?",
+          "Implementa mudanças e investe tempo e energia; ocorre há menos de 6 meses."
+        ],
+        [
+          "O que caracteriza o estágio de manutenção?",
+          "Dá continuidade ao processo para manter ganhos e prevenir recaídas; ocorre há mais de 6 meses."
+        ],
+        [
+          "Como a recaída é vista no modelo de Prochaska e DiClemente?",
+          "Como uma falha em se manter em um estágio — é considerada NORMAL."
+        ],
+        [
+          "Para quais estágios a Entrevista Motivacional (EM) é indicada?",
+          "Contemplação e pré-contemplação."
+        ],
+        [
+          "O que significa a sigla EM (componentes) na entrevista motivacional?",
+          "Envolver, Orientar, Evocar, Planejar."
+        ],
+        [
+          "O que é 'Envolver' na entrevista motivacional?",
+          "Estilo de comunicação e espírito centrado no paciente."
+        ],
+        [
+          "O que é 'Orientar' na entrevista motivacional?",
+          "Focar num comportamento-alvo identificado para a mudança."
+        ],
+        [
+          "O que é 'Evocar' na entrevista motivacional?",
+          "Trazer as motivações do próprio paciente para a mudança."
+        ],
+        [
+          "O que é 'Planejar' na entrevista motivacional?",
+          "Ajudar o paciente a encontrar, dentro de si, os planos para a mudança."
+        ],
+        [
+          "Qual a fórmula do LDL-c (Friedewald)?",
+          "LDL-c = Colesterol Total − HDL-c − (Triglicerídeos / 5)."
+        ],
+        [
+          "Até qual valor de triglicerídeos essa fórmula é válida?",
+          "Até 400 mg/dL."
+        ],
+        [
+          "Qual o principal alvo do tratamento da dislipidemia?",
+          "O LDL-c elevado."
+        ],
+        [
+          "O HDL-c baixo é um alvo farmacológico?",
+          "Não — é um marcador de risco, mas não um alvo farmacológico direto."
+        ],
+        [
+          "Quando o não-HDL é útil como parâmetro?",
+          "Quando os triglicérides estão elevados."
+        ],
+        [
+          "Quais as 3 principais complicações associadas à dislipidemia?",
+          "Infarto, AVC e doença arterial periférica."
+        ],
+        [
+          "A partir de que idade se inicia o rastreio rotineiro de dislipidemia?",
+          "Aos 40 anos."
+        ],
+        [
+          "Antes dos 40 anos, quais fatores indicam rastrear dislipidemia?",
+          "Diabetes, hipertensão, obesidade, tabagismo, doença renal crônica, doença cardiovascular, ou história familiar de doença cardiovascular prematura (homem <55, mulher <65 anos)."
+        ],
+        [
+          "Triglicerídeos muito elevados (≥500 mg/dL) aumentam o risco de quê?",
+          "Pancreatite aguda."
+        ],
+        [
+          "Segundo a tabela de valores de referência, o que é considerado LDL-c 'ótimo'?",
+          "< 100 mg/dL."
+        ],
+        [
+          "Segundo a tabela, quando o HDL-c é considerado 'baixo'?",
+          "< 40 mg/dL."
+        ],
+        [
+          "Como deve ser o tratamento quando LDL-c ≥190 mg/dL ou há hipercolesterolemia familiar?",
+          "Estatina de alta intensidade; a partir de 2025, considerar associação inicial com ezetimiba."
+        ],
+        [
+          "Qual a conduta para triglicerídeos ≥1.000 mg/dL?",
+          "Tratamento imediato com fibrato, dieta com restrição importante de gorduras e correção das causas secundárias."
+        ]
+      ]
+    },
+    {
+      "id": "deck-obesidade-1",
+      "discipline": "Atenção Primária à Saúde III",
+      "name": "Obesidade",
+      "cards": [
+        [
+          "Que porcentagem da população brasileira tem obesidade, segundo as notas?",
+          "25%."
+        ],
+        [
+          "O que caracteriza a transição epidemiológica da obesidade citada nas notas?",
+          "Populações mais pobres passam a ter mais obesidade — aumentando a prevalência."
+        ],
+        [
+          "Cite comorbidades associadas à obesidade citadas nas notas.",
+          "Síndrome metabólica, diabetes tipo II, hipertensão arterial, dislipidemia, alterações no ciclo menstrual/infertilidade/hirsutismo, AVC, apneia do sono, osteoartrose, depressão."
+        ],
+        [
+          "Na avaliação inicial da obesidade, o que deve ser afastado?",
+          "A presença de doença ou uso de fármacos que possam ter papel no ganho de peso."
+        ],
+        [
+          "Quais classes de fármacos são citadas como obesogênicas?",
+          "Antipsicóticos atípicos, antidepressivos, estabilizadores de humor, glicocorticoides, betabloqueadores, hipoglicemiantes, anticonvulsivantes, anti-histamínicos e hormônios (progestágenos)."
+        ],
+        [
+          "Segundo a classificação por IMC, o que é sobrepeso?",
+          "IMC entre 25,0–29,9 kg/m², com risco de complicações aumentado."
+        ],
+        [
+          "Segundo a classificação, o que é obesidade grau III?",
+          "IMC ≥ 40,0 kg/m², com risco de complicações muito alto."
+        ],
+        [
+          "Qual a recomendação da OMS para prevenção de ganho de peso na vida adulta?",
+          "Não exceder 5 kg de ganho de peso ao longo da vida adulta."
+        ],
+        [
+          "O que significa a sigla RASO nas intervenções de prevenção de ganho de peso?",
+          "Reduzir, Adicionar, Substituir, Monitorar."
+        ],
+        [
+          "Qual a meta de perda de peso recomendada em 6 meses para obesidade/sobrepeso com fatores de risco?",
+          "5–10% do peso corporal."
+        ],
+        [
+          "Qual a recomendação de atividade física para perda de peso?",
+          "30–60 minutos, 3x por semana."
+        ],
+        [
+          "Cite exemplos de mudanças de hábitos alimentares citadas nas notas.",
+          "Dieta cetogênica, dieta mediterrânea, jejum intermitente."
+        ],
+        [
+          "Como é feito o monitoramento da adesão ao tratamento da obesidade?",
+          "Diário alimentar."
+        ],
+        [
+          "Que exames complementares são citados na avaliação da obesidade?",
+          "Glicemia de jejum e/ou hemoglobina glicada, perfil lipídico, creatinina e função renal, ALT/AST, e TSH se houver suspeita de hipotireoidismo."
+        ],
+        [
+          "Como agem a semaglutida e a tirzepatida no tratamento da obesidade?",
+          "Promovem redução do apetite e aumento da saciedade, auxiliando a perda de peso quando associadas a mudanças de estilo de vida."
+        ],
+        [
+          "Como deve ser iniciada a dose de semaglutida/tirzepatida injetável?",
+          "Em dose baixa, com aumento gradual — não na dose máxima."
+        ],
+        [
+          "Quais os efeitos adversos comuns da semaglutida/tirzepatida?",
+          "Náuseas, vômitos, diarreia, dor abdominal."
+        ],
+        [
+          "Qual contraindicação é compartilhada por semaglutida e tirzepatida?",
+          "História pessoal ou familiar de carcinoma medular de tireoide ou MEN 2."
+        ],
+        [
+          "A partir de que IMC (ou IMC+comorbidade) o tratamento farmacológico está indicado?",
+          "IMC ≥ 40, ou IMC ≥ 35 com comorbidades, sem melhora com tratamento do estilo de vida."
+        ],
+        [
+          "Quando se deve avaliar indicação de cirurgia bariátrica?",
+          "Quando não há melhora do quadro clínico com as medidas anteriores, em pacientes com IMC ≥40 ou ≥35 com comorbidades."
+        ],
+        [
+          "Quais profissionais devem acompanhar o paciente no pré e pós-operatório de cirurgia bariátrica, além do cirurgião?",
+          "Endocrinologista, psicólogo e nutricionista."
+        ]
+      ]
+    }
   ]
+}
 }
