@@ -264,6 +264,8 @@ let sessionDone = 0;
 let saveError = false;
 let formFront = "", formBack = "";
 let formTopic = "", formDiscipline = "";
+let selectMode = false;
+let selectedIds = [];
 
 // Merges an array of seed-shaped decks into an existing decks object.
 // Adds missing decks whole; adds missing cards (by id) to decks that already exist.
@@ -370,20 +372,22 @@ function saveDecks() {
   }
 }
 
-function startStudy(discipline, cramAll) {
-  const deckIds = Object.values(decks).filter(d => d.discipline === discipline).map(d => d.id);
+function startStudy(deckIds, label, cramAll) {
   let pool = [];
   deckIds.forEach(id => {
     const deck = decks[id];
+    if (!deck) return;
     const cards = cramAll ? deck.cards : deck.cards.filter(isDue);
     cards.forEach(c => pool.push({ ...c, _deckId: id }));
   });
   if (pool.length === 0) return;
-  activeDiscipline = discipline;
+  activeDiscipline = label;
   queue = shuffle(pool);
   sessionDone = 0;
   flipped = false;
   screen = "study";
+  selectMode = false;
+  selectedIds = [];
   render();
 }
 
@@ -445,35 +449,51 @@ function renderHome() {
   });
   const disciplineNames = Object.keys(groups).sort((a,b) => new Date(groups[a][0].createdAt) - new Date(groups[b][0].createdAt));
 
+  const headerBtns = `
+    <div style="display:flex; gap:8px; align-items:center;">
+      <button class="${selectMode ? "btn-study" : "btn-ghost"}" data-action="toggle-select-mode">${selectMode ? "cancelar seleção" : "selecionar tópicos"}</button>
+      ${!selectMode ? `<button class="btn-ghost" data-action="open-settings" title="Sincronização">⚙︎ sincronizar</button>
+      <button class="btn-primary-icon" data-action="new-topic">+ novo tópico</button>` : ""}
+    </div>`;
+
   if (disciplineNames.length === 0) {
     return `
       <div class="container">
         <div class="header">
           <div><div class="eyebrow">caderno de flashcards</div><h1 class="title">Suas disciplinas</h1></div>
-          <div style="display:flex; gap:8px; align-items:center;">
-            <button class="btn-ghost" data-action="open-settings" title="Sincronização">⚙︎ sincronizar</button>
-            <button class="btn-primary-icon" data-action="new-topic">+ novo tópico</button>
-          </div>
+          ${headerBtns}
         </div>
         ${renderSyncPill()}
         <div class="empty-state">Nenhuma disciplina ainda. Crie um tópico pra começar.</div>
       </div>`;
   }
 
+  const selectedDue = selectedIds.reduce((s, id) => s + ((decks[id]?.cards.filter(isDue).length) || 0), 0);
+  const selectedTotal = selectedIds.reduce((s, id) => s + ((decks[id]?.cards.length) || 0), 0);
+
   const cards = disciplineNames.map(discipline => {
     const topics = groups[discipline];
     const totalCards = topics.reduce((s,t) => s + t.cards.length, 0);
     const totalDue = topics.reduce((s,t) => s + t.cards.filter(isDue).length, 0);
     const mastered = topics.reduce((s,t) => s + t.cards.filter(c => c.level >= 5).length, 0);
+    const allDeckIds = topics.map(t => t.id).join(",");
     const topicRows = topics.map(t => {
       const due = t.cards.filter(isDue).length;
+      const checked = selectedIds.includes(t.id);
       return `
         <div class="topic-row">
-          <div>
-            <span class="topic-row-name">${esc(t.name)}</span><br/>
-            <span class="topic-row-meta">${t.cards.length} cards${due > 0 ? ` · ${due} pra hoje` : ""}</span>
+          <div style="display:flex; align-items:center; gap:10px; flex:1; min-width:0;">
+            ${selectMode ? `<input type="checkbox" data-action="toggle-select" data-deck="${t.id}" ${checked ? "checked" : ""} style="width:18px; height:18px; accent-color:#1B4D4A; flex-shrink:0;" />` : ""}
+            <div>
+              <span class="topic-row-name">${esc(t.name)}</span><br/>
+              <span class="topic-row-meta">${t.cards.length} cards${due > 0 ? ` · ${due} pra hoje` : ""}</span>
+            </div>
           </div>
-          <button class="btn-small-ghost" data-action="add-to-topic" data-deck="${t.id}">+</button>
+          ${!selectMode ? `
+            <div style="display:flex; gap:6px; flex-shrink:0;">
+              <button class="btn-small-ghost" data-action="study" data-deckids="${t.id}" data-label="${esc(t.name)}" data-cram="${due === 0 ? "true" : "false"}" title="Revisar só este tópico">▸</button>
+              <button class="btn-small-ghost" data-action="add-to-topic" data-deck="${t.id}">+</button>
+            </div>` : ""}
         </div>`;
     }).join("");
 
@@ -485,30 +505,39 @@ function renderHome() {
           <span>${totalCards} cards · ${topics.length} tópico(s)</span>
           ${mastered > 0 ? `<span>🔥 ${mastered} dominados</span>` : ""}
         </div>
-        <div class="deck-actions">
-          <button class="btn-study" ${totalDue === 0 ? "disabled" : ""} data-action="study" data-discipline="${esc(discipline)}" data-cram="false">
-            ${totalDue > 0 ? `revisar disciplina (${totalDue})` : "tudo em dia"}
-          </button>
-          ${totalCards > 0 ? `<button class="btn-ghost" data-action="study" data-discipline="${esc(discipline)}" data-cram="true">revisar tudo</button>` : ""}
-        </div>
+        ${!selectMode ? `
+          <div class="deck-actions">
+            <button class="btn-study" ${totalDue === 0 ? "disabled" : ""} data-action="study" data-deckids="${allDeckIds}" data-label="${esc(discipline)}" data-cram="false">
+              ${totalDue > 0 ? `revisar disciplina (${totalDue})` : "tudo em dia"}
+            </button>
+            ${totalCards > 0 ? `<button class="btn-ghost" data-action="study" data-deckids="${allDeckIds}" data-label="${esc(discipline)}" data-cram="true">revisar tudo</button>` : ""}
+          </div>` : ""}
         <div class="topic-list">
           ${topicRows}
-          <button class="add-topic-row" data-action="new-topic" data-discipline="${esc(discipline)}">+ novo tópico em ${esc(discipline)}</button>
+          ${!selectMode ? `<button class="add-topic-row" data-action="new-topic" data-discipline="${esc(discipline)}">+ novo tópico em ${esc(discipline)}</button>` : ""}
         </div>
       </div>`;
   }).join("");
+
+  const selectionBar = (selectMode && selectedIds.length > 0) ? `
+    <div style="position:sticky; bottom:16px; margin-top:20px; background:#1B4D4A; color:#F7F3E6; border-radius:8px; padding:14px 18px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; box-shadow:0 4px 14px rgba(0,0,0,0.25);">
+      <span style="font-size:13.5px; font-weight:600;">${selectedIds.length} tópico(s) selecionado(s)</span>
+      <div style="display:flex; gap:8px;">
+        <button class="btn-study" data-action="study-selected" data-cram="false" ${selectedDue === 0 ? "disabled" : ""}>${selectedDue > 0 ? `revisar (${selectedDue})` : "nada pra hoje"}</button>
+        ${selectedTotal > 0 ? `<button class="btn-ghost" style="background:transparent; border-color:#F7F3E6; color:#F7F3E6;" data-action="study-selected" data-cram="true">revisar tudo</button>` : ""}
+      </div>
+    </div>` : "";
 
   return `
     <div class="container">
       <div class="header">
         <div><div class="eyebrow">caderno de flashcards</div><h1 class="title">Suas disciplinas</h1></div>
-        <div style="display:flex; gap:8px; align-items:center;">
-          <button class="btn-ghost" data-action="open-settings" title="Sincronização">⚙︎ sincronizar</button>
-          <button class="btn-primary-icon" data-action="new-topic">+ novo tópico</button>
-        </div>
+        ${headerBtns}
       </div>
+      ${selectMode ? `<div class="subtle">Marque um ou mais tópicos (de qualquer disciplina) e revise só esses.</div>` : ""}
       ${renderSyncPill()}
-      <div class="deck-grid">${cards}</div>
+      <div class="deck-grid" style="margin-top:${selectMode ? "16px" : "0"}">${cards}</div>
+      ${selectionBar}
     </div>`;
 }
 
@@ -643,9 +672,21 @@ function attachHandlers() {
         screen = "add";
         render();
       } else if (action === "study") {
-        const discipline = el.getAttribute('data-discipline');
+        const deckIds = (el.getAttribute('data-deckids') || "").split(",").filter(Boolean);
+        const label = el.getAttribute('data-label') || "";
         const cram = el.getAttribute('data-cram') === "true";
-        startStudy(discipline, cram);
+        startStudy(deckIds, label, cram);
+      } else if (action === "study-selected") {
+        const cram = el.getAttribute('data-cram') === "true";
+        startStudy([...selectedIds], "Seleção personalizada", cram);
+      } else if (action === "toggle-select-mode") {
+        selectMode = !selectMode;
+        if (!selectMode) selectedIds = [];
+        render();
+      } else if (action === "toggle-select") {
+        const id = el.getAttribute('data-deck');
+        selectedIds = selectedIds.includes(id) ? selectedIds.filter(x => x !== id) : [...selectedIds, id];
+        render();
       } else if (action === "create-topic") {
         formDiscipline = document.getElementById('input-discipline').value;
         formTopic = document.getElementById('input-topic').value;
