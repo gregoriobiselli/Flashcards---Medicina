@@ -5,26 +5,86 @@
       "discipline": "Saúde e Doença I",
       "name": "Oscilações do Potencial de Membrana",
       "cards": [
-        ["O que é o potencial de ação?", "Mecanismo de transmitir sinais elétricos a longas distâncias sem decaimento, devido ao fluxo de íons por canais."],
-        ["O que caracteriza um estímulo hiperpolarizante?", "É inibitório; fluxo de cargas positivas para fora (ex: K+ saindo, Cl- entrando)."],
-        ["O que caracteriza um estímulo despolarizante?", "É excitatório; fluxo de cargas positivas para dentro (ex: Na+ entrando, Ca2+ entrando)."],
-        ["Do que depende o funcionamento do potencial de ação?", "De um sinal gerador que despolarize a membrana (liberação de neurotransmissor, estímulo mecânico ou químico)."],
-        ["O que acontece com o K+ no início da despolarização?", "O equilíbrio se perde e o K+ sai da célula."],
-        ["Se o estímulo não atinge o limiar, o que acontece com o canal de Na+ recém-aberto?", "Ele já fecha (não dispara potencial de ação)."],
-        ["Se o estímulo abre os canais de Na+ e atinge o limiar, o que ocorre com as correntes?", "Entra mais Na+ do que sai K+ (INa > IK)."],
-        ["Qual toxina inibe o canal de Na+ sensível à voltagem?", "Tetrodotoxina."],
-        ["Como funciona o ciclo dos canais de Na+ (fechado-aberto-inativo)?", "O canal fechado abre com a despolarização; a inativação depende apenas da ativação e da evolução temporal (ocorre sempre que o canal abre, não do potencial em si); para voltar ao estado fechado, a célula precisa voltar a ficar negativa."],
-        ["O que causa a repolarização?", "Inativação dos canais de Na+ sensíveis à voltagem, e abertura tardia dos canais de K+ sensíveis à voltagem."],
-        ["O que é a hiperpolarização, nesse contexto?", "Um momento em que o Vm fica mais negativo que o repouso, causado pelos canais de K+ ainda abertos."],
-        ["O que caracteriza o período refratário absoluto?", "Não é possível responder a outro estímulo — os canais de Na+ estão inativos ou já abertos."],
-        ["Por que existe o período refratário absoluto?", "É o motivo pelo qual a propagação do potencial de ação é unidirecional."],
-        ["O que caracteriza o período refratário relativo?", "É possível responder a outro estímulo, desde que seja mais intenso — o limiar está mais alto."],
-        ["O que é a propagação eletrotônica (passiva)?", "Propagação de uma corrente injetada que necessita de um potencial gerador, e que decai (se espraia) com a distância."],
-        ["Do que depende a constante de espaço (λ)?", "Resistência da membrana (nº de canais abertos), resistência interna (diâmetro da célula) e resistência externa (≈0)."],
-        ["Do que depende a velocidade de condução do potencial?", "Da capacitância (Cm) e da resistência (Rm) da membrana."],
-        ["Como a capacitância da membrana afeta o tempo de variação do potencial?", "Quanto maior a capacitância, maior o tempo para variar o potencial (condução mais lenta)."],
-        ["Como a resistência da membrana afeta o tempo de variação do potencial?", "Quanto maior a resistência, maior o tempo para variar o potencial."],
-        ["Como a bainha de mielina afeta a capacitância e a resistência da membrana?", "Aumenta a espessura → diminui a capacitância; aumenta o diâmetro efetivo do axônio → aumenta a resistência — ambos aceleram a condução."]
+        [
+          "O que é o potencial de ação?",
+          "Mecanismo de transmitir sinais elétricos a longas distâncias sem decaimento, devido ao fluxo de íons por canais."
+        ],
+        [
+          "O que caracteriza um estímulo hiperpolarizante?",
+          "É inibitório; fluxo de cargas positivas para fora (ex: K+ saindo, Cl- entrando)."
+        ],
+        [
+          "O que caracteriza um estímulo despolarizante?",
+          "É excitatório; fluxo de cargas positivas para dentro (ex: Na+ entrando, Ca2+ entrando)."
+        ],
+        [
+          "Do que depende o funcionamento do potencial de ação?",
+          "De um sinal gerador que despolarize a membrana (liberação de neurotransmissor, estímulo mecânico ou químico)."
+        ],
+        [
+          "O que acontece com o K+ no início da despolarização?",
+          "O equilíbrio se perde e o K+ sai da célula."
+        ],
+        [
+          "Se o estímulo não atinge o limiar, o que acontece com o canal de Na+ recém-aberto?",
+          "Ele já fecha (não dispara potencial de ação)."
+        ],
+        [
+          "Se o estímulo abre os canais de Na+ e atinge o limiar, o que ocorre com as correntes?",
+          "Entra mais Na+ do que sai K+ (INa > IK)."
+        ],
+        [
+          "Qual toxina inibe o canal de Na+ sensível à voltagem?",
+          "Tetrodotoxina."
+        ],
+        [
+          "Como funciona o ciclo dos canais de Na+ (fechado-aberto-inativo)?",
+          "O canal fechado abre com a despolarização; a inativação depende apenas da ativação e da evolução temporal (ocorre sempre que o canal abre, não do potencial em si); para voltar ao estado fechado, a célula precisa voltar a ficar negativa."
+        ],
+        [
+          "O que causa a repolarização?",
+          "Inativação dos canais de Na+ sensíveis à voltagem, e abertura tardia dos canais de K+ sensíveis à voltagem."
+        ],
+        [
+          "O que é a hiperpolarização, nesse contexto?",
+          "Um momento em que o Vm fica mais negativo que o repouso, causado pelos canais de K+ ainda abertos."
+        ],
+        [
+          "O que caracteriza o período refratário absoluto?",
+          "Não é possível responder a outro estímulo — os canais de Na+ estão inativos ou já abertos."
+        ],
+        [
+          "Por que existe o período refratário absoluto?",
+          "É o motivo pelo qual a propagação do potencial de ação é unidirecional."
+        ],
+        [
+          "O que caracteriza o período refratário relativo?",
+          "É possível responder a outro estímulo, desde que seja mais intenso — o limiar está mais alto."
+        ],
+        [
+          "O que é a propagação eletrotônica (passiva)?",
+          "Propagação de uma corrente injetada que necessita de um potencial gerador, e que decai (se espraia) com a distância."
+        ],
+        [
+          "Do que depende a constante de espaço (λ)?",
+          "Resistência da membrana (nº de canais abertos), resistência interna (diâmetro da célula) e resistência externa (≈0)."
+        ],
+        [
+          "Do que depende a velocidade de condução do potencial?",
+          "Da capacitância (Cm) e da resistência (Rm) da membrana."
+        ],
+        [
+          "Como a capacitância da membrana afeta o tempo de variação do potencial?",
+          "Quanto maior a capacitância, maior o tempo para variar o potencial (condução mais lenta)."
+        ],
+        [
+          "Como a resistência da membrana afeta o tempo de variação do potencial?",
+          "Quanto maior a resistência, maior o tempo para variar o potencial."
+        ],
+        [
+          "Como a bainha de mielina afeta a capacitância e a resistência da membrana?",
+          "Aumenta a espessura → diminui a capacitância; aumenta o diâmetro efetivo do axônio → aumenta a resistência — ambos aceleram a condução."
+        ]
       ]
     },
     {
@@ -32,31 +92,223 @@
       "discipline": "Saúde e Doença I",
       "name": "Sinapses Neuromusculares",
       "cards": [
-        ["O que é uma sinapse?", "Mecanismo pelo qual há passagem de sinal elétrico entre células, podendo ser elétrica ou química."],
-        ["Como funciona uma sinapse elétrica?", "O sinal passa por uma gap-junction, permitindo corrente elétrica direta entre as células."],
-        ["Quais as etapas da liberação do neurotransmissor na sinapse química?", "A vesícula se aproxima do terminal pré-sináptico, incorpora a complexina, entra cálcio, e o neurotransmissor é liberado."],
-        ["Qual o papel do cálcio na liberação do neurotransmissor?", "Sua entrada no terminal pré-sináptico desencadeia a fusão da vesícula com a membrana e a liberação do neurotransmissor."],
-        ["Quais os dois tipos de receptores pós-sinápticos?", "Ionotrópicos e metabotrópicos."],
-        ["O que caracteriza um receptor ionotrópico?", "Provoca entrada ou saída direta de corrente (é um canal iônico); pode ser seletivo a cátions ou ânions."],
-        ["O que caracteriza um receptor metabotrópico?", "É acoplado a uma proteína G."],
-        ["O que é o Potencial Pós-Sináptico (PPS)?", "Um potencial graduado que se propaga passivamente, dependendo da quantidade de canais abertos."],
-        ["Qual a diferença entre PEPS e PIPS?", "PEPS é excitatório (despolarizante); PIPS é inibitório (hiperpolarizante)."],
-        ["O que torna a junção neuromuscular mais rápida e simples que outras sinapses?", "É sempre química, unidirecional, com neurotransmissor único (acetilcolina) e sempre causa despolarização da célula."],
-        ["Qual o neurotransmissor da junção neuromuscular?", "Acetilcolina."],
-        ["Qual efeito a acetilcolina causa na célula muscular?", "Despolarização."],
-        ["Como age a ômega-conotoxina na junção neuromuscular?", "Impede a entrada de Ca2+ no terminal pré-sináptico, bloqueando a fusão de vesículas — efeito de relaxante muscular."],
-        ["Como age a D-tubocurarina?", "Bloqueia os receptores para acetilcolina."],
-        ["Como agem os agonistas de acetilcolina, e por que causam contração seguida de relaxamento?", "Abrem persistentemente os canais ativados por Ach; a contração inicial é seguida de relaxamento pela despolarização mantida (canais de Na+ ficam inativos)."],
-        ["Como agem os inibidores de acetilcolinesterase?", "Impedem a degradação da acetilcolina, prolongando seu efeito na junção."],
-        ["O que é a Miastenia Gravis?", "Doença autoimune com diminuição dos receptores nicotínicos de acetilcolina."],
-        ["Qual o tratamento específico da Miastenia Gravis, segundo as notas?", "Inibidor de acetilcolinesterase."],
-        ["Paciente com fraqueza muscular progressiva ao repetir estímulo elétrico, tumor de timo — qual doença e achado eletroneuromiográfico?", "Miastenia Gravis; redução progressiva da amplitude dos potenciais de ação musculares a cada estímulo repetido (menos fibras estimuladas)."],
-        ["Paciente com ptose e diplopia após aplicação cosmética de toxina — qual o mecanismo da substância aplicada?", "Bloqueia a fusão de vesículas na membrana pré-sináptica de neurônios motores na placa motora, impedindo a liberação de acetilcolina."],
-        ["No reflexo patelar, por que a via para o neurônio motor extensor tem menor latência que a via para o flexor?", "Porque a via extensora é monossináptica (direta), enquanto a via para o flexor passa por um interneurônio inibitório adicional (disináptica) — inibição recíproca, com mais uma sinapse e mais atraso."]
+        [
+          "O que é uma sinapse?",
+          "Mecanismo pelo qual há passagem de sinal elétrico entre células, podendo ser elétrica ou química."
+        ],
+        [
+          "Como funciona uma sinapse elétrica?",
+          "O sinal passa por uma gap-junction, permitindo corrente elétrica direta entre as células."
+        ],
+        [
+          "Quais as etapas da liberação do neurotransmissor na sinapse química?",
+          "A vesícula se aproxima do terminal pré-sináptico, incorpora a complexina, entra cálcio, e o neurotransmissor é liberado."
+        ],
+        [
+          "Qual o papel do cálcio na liberação do neurotransmissor?",
+          "Sua entrada no terminal pré-sináptico desencadeia a fusão da vesícula com a membrana e a liberação do neurotransmissor."
+        ],
+        [
+          "Quais os dois tipos de receptores pós-sinápticos?",
+          "Ionotrópicos e metabotrópicos."
+        ],
+        [
+          "O que caracteriza um receptor ionotrópico?",
+          "Provoca entrada ou saída direta de corrente (é um canal iônico); pode ser seletivo a cátions ou ânions."
+        ],
+        [
+          "O que caracteriza um receptor metabotrópico?",
+          "É acoplado a uma proteína G."
+        ],
+        [
+          "O que é o Potencial Pós-Sináptico (PPS)?",
+          "Um potencial graduado que se propaga passivamente, dependendo da quantidade de canais abertos."
+        ],
+        [
+          "Qual a diferença entre PEPS e PIPS?",
+          "PEPS é excitatório (despolarizante); PIPS é inibitório (hiperpolarizante)."
+        ],
+        [
+          "O que torna a junção neuromuscular mais rápida e simples que outras sinapses?",
+          "É sempre química, unidirecional, com neurotransmissor único (acetilcolina) e sempre causa despolarização da célula."
+        ],
+        [
+          "Qual o neurotransmissor da junção neuromuscular?",
+          "Acetilcolina."
+        ],
+        [
+          "Qual efeito a acetilcolina causa na célula muscular?",
+          "Despolarização."
+        ],
+        [
+          "Como age a ômega-conotoxina na junção neuromuscular?",
+          "Impede a entrada de Ca2+ no terminal pré-sináptico, bloqueando a fusão de vesículas — efeito de relaxante muscular."
+        ],
+        [
+          "Como age a D-tubocurarina?",
+          "Bloqueia os receptores para acetilcolina."
+        ],
+        [
+          "Como agem os agonistas de acetilcolina, e por que causam contração seguida de relaxamento?",
+          "Abrem persistentemente os canais ativados por Ach; a contração inicial é seguida de relaxamento pela despolarização mantida (canais de Na+ ficam inativos)."
+        ],
+        [
+          "Como agem os inibidores de acetilcolinesterase?",
+          "Impedem a degradação da acetilcolina, prolongando seu efeito na junção."
+        ],
+        [
+          "O que é a Miastenia Gravis?",
+          "Doença autoimune com diminuição dos receptores nicotínicos de acetilcolina."
+        ],
+        [
+          "Qual o tratamento específico da Miastenia Gravis, segundo as notas?",
+          "Inibidor de acetilcolinesterase."
+        ],
+        [
+          "Paciente com fraqueza muscular progressiva ao repetir estímulo elétrico, tumor de timo — qual doença e achado eletroneuromiográfico?",
+          "Miastenia Gravis; redução progressiva da amplitude dos potenciais de ação musculares a cada estímulo repetido (menos fibras estimuladas)."
+        ],
+        [
+          "Paciente com ptose e diplopia após aplicação cosmética de toxina — qual o mecanismo da substância aplicada?",
+          "Bloqueia a fusão de vesículas na membrana pré-sináptica de neurônios motores na placa motora, impedindo a liberação de acetilcolina."
+        ],
+        [
+          "No reflexo patelar, por que a via para o neurônio motor extensor tem menor latência que a via para o flexor?",
+          "Porque a via extensora é monossináptica (direta), enquanto a via para o flexor passa por um interneurônio inibitório adicional (disináptica) — inibição recíproca, com mais uma sinapse e mais atraso."
+        ]
       ]
-    }
-  ]{
-  "decks": [
+    },
+    {
+      "id": "deck-contracao-muscular-1",
+      "discipline": "Saúde e Doença I",
+      "name": "Contração Muscular",
+      "cards": [
+        [
+          "O que delimita o sarcômero?",
+          "A linha Z."
+        ],
+        [
+          "O que a linha I contém?",
+          "Apenas actina."
+        ],
+        [
+          "O que a linha A contém?",
+          "Actina e miosina."
+        ],
+        [
+          "O que a linha H contém?",
+          "Apenas miosina."
+        ],
+        [
+          "O que é a linha M?",
+          "A região central do sarcômero."
+        ],
+        [
+          "Qual proteína forma o filamento fino?",
+          "Actina."
+        ],
+        [
+          "Qual proteína forma o filamento grosso?",
+          "Miosina II."
+        ],
+        [
+          "Qual proteína do sarcômero é elástica?",
+          "Titina."
+        ],
+        [
+          "Quais outras proteínas do sarcômero são citadas, além de actina, miosina e titina?",
+          "Nebulina e α-actinina."
+        ],
+        [
+          "O que conecta o acoplamento excitação-contração?",
+          "Potencial de ação, liberação de Ca2+ e contração muscular."
+        ],
+        [
+          "Onde ocorre a tríade?",
+          "No 1 túbulo T (invaginação) e 2 cisternas terminais do retículo sarcoplasmático (RS)."
+        ],
+        [
+          "Quais as etapas da transmissão do sinal até o túbulo T?",
+          "Acetilcolina é liberada na junção neuromuscular → gera um PEPS → se atingir o limiar, dispara potencial de ação → o PA se propaga pelo sarcolema e entra nos túbulos T."
+        ],
+        [
+          "Qual a primeira etapa da atuação da tríade?",
+          "Despolarização dos túbulos T."
+        ],
+        [
+          "O que ativa o RDHP (receptor de dihidropiridina) e o que ele faz?",
+          "A despolarização dos túbulos T o ativa; ele sofre mudança conformacional, sendo sensível à voltagem e inibido por dihidropiridina."
+        ],
+        [
+          "O que ativa o RyR (receptor de rianodina) no músculo esquelético?",
+          "Está fisicamente acoplado ao RDHP (interação mecânica direta) — é o canal de Ca2+ do RS."
+        ],
+        [
+          "Após a liberação do Ca2+ do RS, o que acontece?",
+          "O Ca2+ aumenta no citoplasma e se liga à troponina, iniciando o ciclo de cross-bridges, que gera a contração muscular."
+        ],
+        [
+          "O que caracteriza o desligamento no ciclo de cross-bridges?",
+          "O ATP se liga à miosina, e ela se solta da actina."
+        ],
+        [
+          "O que caracteriza a energização no ciclo de cross-bridges?",
+          "ATP vira ADP + Pi; a cabeça da miosina se estende."
+        ],
+        [
+          "O que caracteriza a ligação fraca no ciclo de cross-bridges?",
+          "O Pi sai, aumentando a afinidade — miosina se liga fracamente à actina."
+        ],
+        [
+          "O que caracteriza a ligação forte no ciclo de cross-bridges?",
+          "A miosina se liga com força a uma nova actina, 2 nós à frente."
+        ],
+        [
+          "O que é o golpe de força (power stroke)?",
+          "A cabeça da miosina fleta, a actina desliza, o sarcômero encurta — a força é gerada."
+        ],
+        [
+          "O que acontece na liberação do ADP no ciclo de cross-bridges?",
+          "É o estado de contração; se houver ATP, um novo ciclo começa; se não houver ATP, a miosina fica presa (rigor)."
+        ],
+        [
+          "Quais as etapas do relaxamento muscular?",
+          "Estímulo neural cessa → repolarização; SERCA bombeia Ca2+ de volta ao RS; Ca2+ citoplasmático diminui; troponina perde Ca2+; tropomiosina bloqueia o sítio de ligação; cross-bridges cessam."
+        ],
+        [
+          "Qual o papel do Cl- no relaxamento muscular?",
+          "Ajuda a repolarizar rapidamente a célula."
+        ],
+        [
+          "Como a somação temporal aumenta a força de contração?",
+          "Como o potencial de ação é mais rápido que a contração, é possível contrair de novo antes do relaxamento completo com o aumento da frequência de estímulo, aumentando cross-bridges e força."
+        ],
+        [
+          "Como a somação espacial aumenta a força de contração?",
+          "Recrutando mais unidades motoras: neurônios menores (menor capacitância e limiar) são recrutados primeiro; mais impulsos sinápticos somados fazem mais neurônios atingirem o limiar, aumentando a tensão."
+        ],
+        [
+          "De que depende a tensão máxima que um músculo pode desenvolver?",
+          "Do comprimento do sarcômero (relação comprimento-tensão) — depende de estar em 100% do comprimento ótimo."
+        ],
+        [
+          "Como funciona o acoplamento excitação-contração no músculo cardíaco, diferente do esquelético?",
+          "O RDHP abre e deixa entrar Ca2+ extracelular; esse Ca2+ ativa o RyR2, causando liberação de Ca2+ induzida por cálcio (diferente do acoplamento mecânico direto do músculo esquelético)."
+        ],
+        [
+          "O que é uma contração isotônica concêntrica?",
+          "O músculo produz força e encurta durante a contração."
+        ],
+        [
+          "O que é uma contração isotônica excêntrica?",
+          "O músculo produz força enquanto alonga."
+        ],
+        [
+          "O que é uma contração isométrica?",
+          "O músculo produz força sem movimento da articulação (sem mudança de comprimento)."
+        ]
+      ]
+    },
     {
       "id": "deck-mccp-1",
       "discipline": "Atenção Primária à Saúde III",
@@ -339,5 +591,4 @@
       ]
     }
   ]
-}
 }
