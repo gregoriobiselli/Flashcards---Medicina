@@ -592,3 +592,1377 @@
     }
   ]
 }
+{
+  "decks": [
+    {
+      "id": "deck-imunidade-inata-1",
+      "discipline": "Agente Hospedeiro I",
+      "name": "Imunidade Inata",
+      "cards": [
+        [
+          "Quais os 2 grandes efeitos gerados pela imunidade inata?",
+          "Inflamação e estado antiviral."
+        ],
+        [
+          "A imunidade inata gera memória imunológica?",
+          "Não."
+        ],
+        [
+          "O que são PAMPs e DAMPs?",
+          "Padrões moleculares associados a patógenos e a dano (danger), respectivamente, reconhecidos pelos PRRs."
+        ],
+        [
+          "Quais os principais PRRs citados e onde atuam?",
+          "TLR, RLR, CDS e lectinas — na membrana, no citosol ou no endossomo."
+        ],
+        [
+          "O que significa dizer que os receptores da imunidade inata atuam em 'modo não clonal'?",
+          "Alta amplitude (reconhecem muitos patógenos diferentes), mas baixa diversidade (repertório limitado, codificado na linhagem germinativa)."
+        ],
+        [
+          "Qual a primeira linha celular de defesa fagocítica e onde é produzida?",
+          "Neutrófilos, produzidos na medula óssea."
+        ],
+        [
+          "O que acontece com os monócitos circulantes ao entrarem nos tecidos?",
+          "Tornam-se macrófagos."
+        ],
+        [
+          "Qual a diferença entre macrófagos M1 e M2?",
+          "M1 fagocita patógenos; M2 fagocita e remodela tecidos."
+        ],
+        [
+          "A que células as células dendríticas se assemelham?",
+          "Aos macrófagos."
+        ],
+        [
+          "O que os mastócitos secretam?",
+          "Citocinas pré-formadas e citocinas produzidas após ativação."
+        ],
+        [
+          "Qual a função das células linfoides inatas (ILCs)?",
+          "Função auxiliar, semelhante à dos linfócitos T CD4."
+        ],
+        [
+          "Qual a função das células NK?",
+          "Função citotóxica, semelhante à dos linfócitos T CD8."
+        ],
+        [
+          "Como age o sistema complemento?",
+          "Em cascata, causando lise osmótica e inflamação."
+        ],
+        [
+          "Quais as 3 vias de ativação do complemento?",
+          "Via clássica (antígeno-anticorpo), via alternativa (superfície microbiana) e via da lectina/MBL (lectina ligadora de manose)."
+        ],
+        [
+          "Quais as principais citocinas da inflamação e o que elas causam de modo geral?",
+          "IL-1, IL-6, TNF-α e IL-8 — causam febre, vasodilatação, catabolismo e quimiotaxia de leucócitos."
+        ],
+        [
+          "Quais as etapas da inflamação, em ordem?",
+          "Recrutamento celular → extravasamento proteico → ativação celular → ativação proteica."
+        ],
+        [
+          "Que efeitos sistêmicos (endócrinos) têm IL-1, IL-6 e TNF?",
+          "Febre, resposta de fase aguda, baixo débito cardíaco e aumento da permeabilidade capilar."
+        ],
+        [
+          "Qual o efeito da IL-8?",
+          "Capta leucócitos por quimiotaxia, atuando via medula óssea."
+        ],
+        [
+          "Que efeito tem a prostaglandina (ação parácrina)?",
+          "Inflamação, dor e febre."
+        ],
+        [
+          "Que efeito tem a histamina (ação parácrina)?",
+          "Vasodilatação."
+        ],
+        [
+          "Qual a sequência de maturação dos granulócitos (leucócitos)?",
+          "Mieloblasto → promielócito → mielócito → metamielócito → bastonete → segmentado."
+        ]
+      ]
+    },
+    {
+      "id": "deck-cocos-grampos-1",
+      "discipline": "Agente Hospedeiro I",
+      "name": "Cocos Gram Positivos I",
+      "cards": [
+        [
+          "Quais as 3 características gerais dos cocos Gram-positivos?",
+          "Forma esférica, coram Gram-positivo e ausência de esporos."
+        ],
+        [
+          "Como se diferenciam os cocos Gram+ pela catalase?",
+          "Catalase positivo = Staphylococcus; catalase negativo = Streptococcus e Enterococcus."
+        ],
+        [
+          "Como o Staphylococcus cresce ao microscópio?",
+          "Em 'cacho de uva'."
+        ],
+        [
+          "Qual o tipo respiratório do Staphylococcus?",
+          "Anaeróbio facultativo."
+        ],
+        [
+          "Como se transmite o Staphylococcus e por que sobrevive em superfícies secas?",
+          "Por contato e fômites; a parede de peptidoglicano dá resistência em superfícies secas."
+        ],
+        [
+          "Estafilococos coagulase-negativos (ECN) são mais ou menos virulentos?",
+          "Menos virulentos — causam infecções oportunistas."
+        ],
+        [
+          "Estafilococos coagulase-positivos (ECP, S. aureus) são mais ou menos virulentos?",
+          "Mais virulentos — causam infecções graves."
+        ],
+        [
+          "Quais doenças o S. epidermidis costuma causar?",
+          "Bacteriemia, endocardite, infecção de feridas cirúrgicas e infecções oportunistas de cateteres, shunts e próteses."
+        ],
+        [
+          "Qual doença o S. saprophyticus costuma causar?",
+          "Infecções do trato urinário."
+        ],
+        [
+          "Qual a função da cápsula de polissacarídeo do Staphylococcus?",
+          "Inibir a fagocitose."
+        ],
+        [
+          "Qual a função do biofilme, e em qual grupo é mais importante?",
+          "Liga as bactérias a tecidos e corpos estranhos; principalmente importante nos coagulase-negativos (ECN)."
+        ],
+        [
+          "O que catalisa a síntese do peptidoglicano e que outra atividade ele tem?",
+          "É catalisado pelas PBPs (proteínas de ligação à penicilina); tem atividade semelhante à endotoxina."
+        ],
+        [
+          "O que são as proteínas MSCRAMM?",
+          "Proteínas de adesão ligadas ao peptidoglicano."
+        ],
+        [
+          "Quais as funções da membrana citoplasmática do Staphylococcus?",
+          "Barreira osmótica e ancoragem para enzimas."
+        ],
+        [
+          "Quais os 2 mecanismos gerais de patogênese do Staphylococcus?",
+          "Adesão/invasão (invasão direta ou disseminação hematogênica com destruição tecidual) e toxicidade."
+        ],
+        [
+          "Qual a função da cápsula como fator de virulência do S. aureus?",
+          "Inibe quimiotaxia e fagocitose, e inibe a proliferação de células mononucleares."
+        ],
+        [
+          "Qual a função da camada mucopolissacarídica do S. aureus?",
+          "Facilita a aderência a corpos estranhos."
+        ],
+        [
+          "Quais as funções do peptidoglicano como fator de virulência?",
+          "Estabilidade osmótica; estimula produção de pirógeno endógeno (efeito tipo endotoxina); quimioatraente de leucócitos (formação de abscesso); inibe a fagocitose."
+        ],
+        [
+          "Qual a função do ácido teicoico?",
+          "Liga-se à fibronectina."
+        ],
+        [
+          "Qual a função da proteína A do S. aureus?",
+          "Inibe a eliminação mediada por anticorpos (liga-se a receptores IgG1, IgG2 e IgG4); é quimioatraente de leucócitos e anticomplemento."
+        ],
+        [
+          "O que fazem as citotoxinas do S. aureus?",
+          "São tóxicas para muitas células: eritrócitos, fibroblastos, leucócitos, macrófagos e plaquetas."
+        ],
+        [
+          "O que fazem as toxinas esfoliativas (ETA, ETB)?",
+          "São serina proteases que clivam as pontes intercelulares no estrato granuloso da epiderme."
+        ],
+        [
+          "O que são as enterotoxinas do S. aureus e que efeito têm?",
+          "Superantígenos termoestáveis que estimulam proliferação de células T e liberação de mediadores inflamatórios em mastócitos e mucosa intestinal, causando náuseas e vômitos."
+        ],
+        [
+          "O que faz a toxina da síndrome do choque tóxico-1 (TSST-1)?",
+          "É um superantígeno que estimula proliferação de células T e liberação de citocinas, produzindo extravasamento e destruição de células endoteliais."
+        ],
+        [
+          "O que faz a coagulase (clumping factor) do S. aureus?",
+          "Converte fibrinogênio em fibrina."
+        ],
+        [
+          "O que faz a hialuronidase do S. aureus?",
+          "Hidrolisa o ácido hialurônico do tecido conjuntivo, promovendo a disseminação da bactéria no tecido."
+        ],
+        [
+          "Qual o mecanismo e a característica marcante da síndrome da pele escaldada?",
+          "Toxicidade; ocorre em lactentes; a bolha se forma SEM bactérias ou células (intoxicação direta)."
+        ],
+        [
+          "Qual o mecanismo e a característica marcante da síndrome do choque tóxico?",
+          "Toxicidade; intoxicação multissistêmica por enterotoxinas termoestáveis, com resolução em 24h."
+        ],
+        [
+          "Qual a diferença entre foliculite e furúnculo?",
+          "Foliculite é uma variante do impetigo restrita ao folículo; furúnculo é mais profundo, com nódulo cheio de pus."
+        ],
+        [
+          "Qual a diferença entre erisipela e celulite (S. pyogenes)?",
+          "Erisipela é mais superficial; celulite é mais profunda e difusa."
+        ],
+        [
+          "O que caracteriza os carbúnculos?",
+          "União de vários furúnculos, com repercussão sistêmica (progressão de infecção local para sistêmica)."
+        ],
+        [
+          "Como ocorrem bacteriemia/endocardite e pneumonia/empiema por S. aureus?",
+          "Por disseminação hematogênica (bacteriemia/endocardite) ou foco pulmonar por disseminação (pneumonia/empiema)."
+        ],
+        [
+          "Quem geralmente causa infecção do trato urinário por Staphylococcus, e em quem?",
+          "S. saprophyticus (coagulase-negativo), em mulheres sexualmente ativas."
+        ],
+        [
+          "Quais amostras podem ser usadas na bacterioscopia direta?",
+          "Pus, líquido sinovial, escarro e sangue."
+        ],
+        [
+          "Por que o sangue precisa de cultura antes da bacterioscopia direta?",
+          "O sangue não pode ser avaliado diretamente sem cultura prévia (diferente do escarro, que pode)."
+        ],
+        [
+          "O que a bacterioscopia direta permite observar?",
+          "Bactérias, coloração de Gram, morfologia e agrupamento."
+        ],
+        [
+          "Como se identifica uma bactéria após a cultura, pelo método manual?",
+          "Por catalase e coagulase."
+        ],
+        [
+          "Quais outros métodos de identificação, além do manual, existem?",
+          "Método automatizado e MALDI-TOF."
+        ],
+        [
+          "Como o Streptococcus/Enterococcus cresce ao microscópio?",
+          "Em 'pares' ou 'cadeias'."
+        ],
+        [
+          "Qual o tipo respiratório do Streptococcus/Enterococcus?",
+          "Anaeróbios; alguns exigem dióxido de carbono (crescimento capnofílico)."
+        ],
+        [
+          "O Streptococcus/Enterococcus é catalase positivo ou negativo?",
+          "Catalase-negativo."
+        ],
+        [
+          "O que o Streptococcus produz ao fermentar carboidratos?",
+          "Ácido láctico."
+        ],
+        [
+          "Quais os 3 padrões de hemólise do Streptococcus?",
+          "Alfa (parcial), beta (total) e gama (ausente)."
+        ],
+        [
+          "O que classifica os grupos de Lancefield (sorogrupo)?",
+          "O polissacarídeo C."
+        ],
+        [
+          "O que classifica o sorotipo (classe I/II) do Streptococcus?",
+          "A proteína M."
+        ],
+        [
+          "Qual o habitat do S. pyogenes?",
+          "Coloniza transitoriamente o trato respiratório."
+        ],
+        [
+          "Como se transmite o S. pyogenes?",
+          "Por perdigotos e colonização da pele."
+        ],
+        [
+          "Quais os fatores de virulência estruturais do S. pyogenes?",
+          "Cápsula, parede celular (carboidrato antígeno A) e membrana citoplasmática (proteína M, classe I ou II)."
+        ],
+        [
+          "O que são as estreptolisinas do S. pyogenes?",
+          "Hemolisinas — O ou S."
+        ],
+        [
+          "Quais toxinas o S. pyogenes produz?",
+          "Exotoxinas pirogênicas e a toxina da síndrome do choque tóxico."
+        ],
+        [
+          "O que caracteriza a fasciíte necrosante?",
+          "Infecção profunda com destruição de músculo/gordura — infecção 'come-carne', quadro grave e agudo."
+        ],
+        [
+          "Qual o mecanismo e a característica da febre escarlatina?",
+          "Toxicidade; erupção eritematosa difusa no tronco, complicação da faringoamigdalite."
+        ],
+        [
+          "Como se diferencia a síndrome do choque tóxico estreptocócico da estafilocócica?",
+          "A estreptocócica ocorre com bacteremia e fasciíte."
+        ],
+        [
+          "Qual o mecanismo e a sequência da febre reumática?",
+          "Hipersensibilidade, após faringoamigdalite; sequência: pancardite → artralgia → artrite."
+        ],
+        [
+          "Qual o mecanismo e a apresentação da glomerulonefrite aguda pós-estreptocócica?",
+          "Hipersensibilidade; ocorre após infecção cutânea, com edema, hipertensão, hematúria e proteinúria."
+        ]
+      ]
+    },
+    {
+      "id": "deck-pato-mecanismos-1",
+      "discipline": "Agente Hospedeiro I",
+      "name": "Mecanismos de Patogenicidade",
+      "cards": [
+        [
+          "Qual a diferença entre fator de virulência e mecanismo de patogenicidade?",
+          "Fator de virulência = estruturas da bactéria usadas na infecção; mecanismo de patogenicidade = como essas estruturas causam dano ao hospedeiro."
+        ],
+        [
+          "Quais os 3 grandes mecanismos de patogenicidade?",
+          "Adesão/invasão, toxicidade e hipersensibilidade."
+        ],
+        [
+          "Cite mecanismos de virulência bacteriana listados no Boxe 14.1.",
+          "Cápsula e biofilme; adesão; invasão; subprodutos do crescimento (gás, ácido); toxinas; enzimas degradativas; proteínas citotóxicas; endotoxinas; superantígenos; indução de inflamação excessiva; evasão do sistema imune/fagocítico; resistência a antibacterianos; crescimento intracelular."
+        ],
+        [
+          "Com que substâncias o corpo se defende na entrada de patógenos?",
+          "Barreiras (pele/muco) e secreções com substâncias antibacterianas (lisozima, defensinas, IgA)."
+        ],
+        [
+          "Como os patógenos podem entrar apesar das barreiras?",
+          "Por 'quebras' nas barreiras (ex: úlceras, tumor) ou por seus próprios meios (ex: resistência à lisozima)."
+        ],
+        [
+          "Onde ficam as adesinas usadas na adesão bacteriana?",
+          "Na ponta das fímbrias (são lectinas)."
+        ],
+        [
+          "O que é biofilme e o que o precede?",
+          "Rede pegajosa de polissacarídeos que liga as bactérias entre si e à superfície; é precedido por um quorum sensing."
+        ],
+        [
+          "Como a bactéria consegue invadir após aderir?",
+          "Destruindo a mucosa e induzindo inflamação para permeabilizá-la, ou penetrando diretamente as células."
+        ],
+        [
+          "O que são as toxinas, de forma geral?",
+          "Proteínas que alteram uma função ou matam a célula."
+        ],
+        [
+          "O que fazem os superantígenos?",
+          "Ativam um grande número de células T, que liberam grandes quantidades de citocinas."
+        ],
+        [
+          "O que são PAMPs e como agem?",
+          "Padrões que sinalizam infecção, ligando-se a TLRs e outras moléculas, estimulando a produção de citocinas (ex: a porção lipídica A do LPS)."
+        ],
+        [
+          "O que são as endotoxinas e de quais bactérias vêm?",
+          "Potentes ativadoras de inflamação, de bactérias Gram-negativas; são liberadas após a destruição da bactéria."
+        ],
+        [
+          "Como é a toxicidade das endotoxinas comparada ao seu poder de disseminação?",
+          "Toxicidade baixa, mas maior poder de disseminação (avassaladora)."
+        ],
+        [
+          "Quanto à fonte bacteriana, quem produz exotoxinas e quem produz endotoxinas?",
+          "Exotoxinas: bactérias Gram-positivas e Gram-negativas; endotoxinas: só Gram-negativas."
+        ],
+        [
+          "Quando as endotoxinas são liberadas, em comparação com as exotoxinas?",
+          "Endotoxinas só são liberadas após destruição da bactéria; exotoxinas são produtos metabólicos do crescimento celular."
+        ],
+        [
+          "Qual a natureza bioquímica de exotoxinas e endotoxinas?",
+          "Exotoxinas: proteínas ou pequenos peptídeos; endotoxinas: porção lipídica (lipídeo A) do LPS."
+        ],
+        [
+          "Como se comparam os efeitos farmacológicos de exo e endotoxinas?",
+          "Exotoxinas têm função específica para uma estrutura celular; endotoxinas causam efeito geral (febre, fraqueza, dor, choque — todas iguais)."
+        ],
+        [
+          "Como se comparam exo e endotoxinas quanto à estabilidade ao aquecimento?",
+          "Exotoxinas geralmente não são estáveis (destruídas entre 60-80°C, exceto enterotoxina estafilocócica e toxinas termoestáveis); endotoxinas são estáveis mesmo após autoclave (1h a 121°C)."
+        ],
+        [
+          "Como se comparam exo e endotoxinas quanto à toxicidade e dose letal?",
+          "Exotoxinas: toxicidade alta, dose letal reduzida; endotoxinas: toxicidade baixa, dose letal elevada."
+        ],
+        [
+          "Exotoxinas e endotoxinas podem ser convertidas em toxoide ou neutralizadas por antitoxina?",
+          "Exotoxinas: sim, para ambas; endotoxinas: não são convertidas em toxoide, e não são facilmente neutralizadas por antitoxinas."
+        ],
+        [
+          "Cite doenças clássicas causadas por exotoxinas.",
+          "Gangrena gasosa, tétano, botulismo, difteria e escarlatina."
+        ],
+        [
+          "Cite doenças clássicas causadas por endotoxinas.",
+          "Febre tifoide, infecções do trato urinário e meningite meningocócica."
+        ],
+        [
+          "Por que a cápsula é considerada um dos fatores de virulência mais importantes?",
+          "É feita de polissacarídeos e ajuda a bactéria a escapar do sistema imune."
+        ],
+        [
+          "Cite outros mecanismos de escape do sistema imune citados.",
+          "Variação antigênica, inativação de anticorpo, crescimento intracelular, coagulase, pirogenase e granulase."
+        ],
+        [
+          "Quais as portas de entrada dos microrganismos no corpo?",
+          "Mucosas (respiratória, TGI, TGU, conjuntiva), pele e via parenteral."
+        ],
+        [
+          "O que é necessário para a aderência do microrganismo, segundo o fluxograma geral?",
+          "Adesinas ou ligantes, glicoproteínas ou lipoproteínas."
+        ],
+        [
+          "O que caracteriza a etapa de penetração/evasão das defesas do hospedeiro?",
+          "Ação de cápsulas (virulência), componentes da parede celular (ex: proteína M) e enzimas."
+        ],
+        [
+          "Quais os 3 caminhos de lesão às células do hospedeiro, no fluxograma geral?",
+          "Lesão direta, toxinas secretadas (exotoxinas) e hipersensibilidade."
+        ]
+      ]
+    },
+    {
+      "id": "deck-fisio-masc-1",
+      "discipline": "Biologia da Reprodução e do Desenvolvimento I",
+      "name": "Fisiologia do Sistema Reprodutor Masculino",
+      "cards": [
+        [
+          "Onde os espermatozoides são produzidos e quais células estão presentes ali?",
+          "No túbulo seminífero; contém células de Sertoli (suporte) e as células da linhagem espermatogênica; as células de Leydig ficam fora do túbulo."
+        ],
+        [
+          "Qual a função do epidídimo?",
+          "Armazenamento dos espermatozoides e desenvolvimento do seu movimento."
+        ],
+        [
+          "Qual a função do ducto deferente?",
+          "Leva os espermatozoides até a próstata."
+        ],
+        [
+          "Qual hormônio o hipotálamo libera para o eixo reprodutor masculino?",
+          "GnRH."
+        ],
+        [
+          "O que o GnRH estimula na hipófise?",
+          "Liberação de LH e FSH."
+        ],
+        [
+          "O que o LH estimula no testículo?",
+          "As células de Leydig a produzirem testosterona (e estradiol)."
+        ],
+        [
+          "O que o FSH estimula no testículo?",
+          "As células de Sertoli, que promovem a espermatogênese e liberam inibina."
+        ],
+        [
+          "Qual a função da inibina no eixo reprodutor masculino?",
+          "Fazer feedback negativo sobre a hipófise/hipotálamo."
+        ],
+        [
+          "A testosterona é hidrofílica ou lipofílica, e que tipo de receptor ela usa?",
+          "Lipofílica; possui receptor nuclear."
+        ],
+        [
+          "Como a testosterona é transportada no sangue?",
+          "Ligada à SHBG (globulina ligadora de hormônios sexuais)."
+        ],
+        [
+          "Em que a testosterona é convertida para se tornar mais potente, e por quê?",
+          "Em di-hidrotestosterona (DHT), que tem maior afinidade pelo receptor."
+        ],
+        [
+          "Que receptores a célula de Leydig possui, e o que o LH estimula nela?",
+          "Receptores de LDL; o LH estimula a expressão de genes envolvidos na captação de colesterol e síntese de testosterona."
+        ],
+        [
+          "Que efeito de longo prazo o LH também tem sobre a célula de Leydig?",
+          "Estimula sua proliferação."
+        ],
+        [
+          "Para que servem as enzimas hidrolíticas e o ATP do espermatozoide?",
+          "As enzimas hidrolíticas participam da fertilização; o ATP move o flagelo."
+        ],
+        [
+          "Qual a sequência da espermatogênese, do início ao fim?",
+          "Espermatogônia → (mitoses) → espermatócito primário → (meiose I) → espermatócito secundário → (meiose II) → espermátides → espermatozoide maduro."
+        ],
+        [
+          "Quais parâmetros são avaliados num espermograma?",
+          "Volume, morfologia, motilidade (progressiva/não progressiva), concentração de espermatozoides, coloração, viscosidade, tempo de liquefação, pH, vitalidade, leucócitos e hemácias."
+        ],
+        [
+          "Quais hormônios são avaliados no exame de sangue para investigar infertilidade masculina?",
+          "Testosterona, estradiol, LH e FSH."
+        ],
+        [
+          "Se o espermograma está alterado com LH e FSH baixos e testosterona alta, qual a causa provável?",
+          "Uso de anabolizantes (o excesso de testosterona exógena suprime o eixo hipotálamo-hipófise por feedback negativo)."
+        ],
+        [
+          "Se LH, FSH e testosterona estão todos baixos, onde está o problema?",
+          "Na hipófise."
+        ],
+        [
+          "Cite efeitos colaterais do uso de anabolizantes.",
+          "Infertilidade, impotência sexual, redução testicular, doenças cardiovasculares (hipertensão, arritmia), falência renal, agressividade/depressão/alteração de humor e libido, e aumento do risco de morte em 4,6x."
+        ],
+        [
+          "Qual a prevalência de uso de anabolizantes, em geral e entre frequentadores de academia?",
+          "3-4% dos homens em geral; 15-25% dos frequentadores de academia."
+        ]
+      ]
+    },
+    {
+      "id": "deck-fisio-fem-1",
+      "discipline": "Biologia da Reprodução e do Desenvolvimento I",
+      "name": "Fisiologia do Sistema Reprodutor Feminino",
+      "cards": [
+        [
+          "Quando ocorrem as divisões mitóticas das oogônias?",
+          "Antes do nascimento, com migração para o córtex ovariano."
+        ],
+        [
+          "Em que fase da meiose o oócito primário fica parado, e como se chama a estrutura formada?",
+          "Prófase I; forma-se o folículo primordial (oócito primário + camada de células da granulosa)."
+        ],
+        [
+          "A partir de quando um folículo se desenvolve a cada mês?",
+          "Desde a puberdade até a menopausa."
+        ],
+        [
+          "O que acontece na meiose I do oócito, e o que se forma?",
+          "Completa-se, formando o primeiro corpo polar (que degenera) e o oócito secundário."
+        ],
+        [
+          "Em que fase o oócito secundário fica parado?",
+          "Metáfase II — é o folículo pré-ovulatório (maduro)."
+        ],
+        [
+          "O que acontece com a meiose II se houver fecundação?",
+          "Se completa, formando o segundo corpo polar (que degenera) e o óvulo (zigoto)."
+        ],
+        [
+          "Qual a sequência de estágios foliculares no ovário?",
+          "Primordial → primário → secundário → pré-antral → antral → pré-ovulatório (maduro) → corpo lúteo → corpo albicans."
+        ],
+        [
+          "Quais as 3 fases da foliculogênese a partir da puberdade?",
+          "Fase dependente de gonadotrofinas (FSH → LH-dependência), fase responsiva a gonadotrofinas e fase independente (regulação intraovariana)."
+        ],
+        [
+          "O que acontece com os folículos não selecionados em cada ciclo?",
+          "Sofrem atresia."
+        ],
+        [
+          "O que o LH estimula no oócito durante o ciclo ovariano?",
+          "A continuação da meiose do oócito primário."
+        ],
+        [
+          "Como variam progesterona e estradiol perto da ovulação?",
+          "Progesterona aumenta e estradiol cai."
+        ],
+        [
+          "O que mais o LH estimula, além da meiose, próximo à ovulação?",
+          "A secreção de enzimas hidrolíticas (para a ruptura do folículo)."
+        ],
+        [
+          "Na esteroidogênese ovariana, o que a célula da teca faz com o colesterol (via LH)?",
+          "Converte colesterol em pregnenolona → progesterona → 17α-OH-progesterona → androstenediona → testosterona."
+        ],
+        [
+          "O que a célula da granulosa faz com os andrógenos recebidos da teca (via FSH)?",
+          "Usa a aromatase para convertê-los em estrona/estradiol."
+        ],
+        [
+          "A célula da granulosa produz andrógenos diretamente?",
+          "Não — falta a ela 17α-hidroxilase e 17,20-desmolase; ela depende dos andrógenos vindos da célula da teca."
+        ],
+        [
+          "(Caso clínico) Por que é incorreto dizer que o útero aumenta a secreção de estrogênios e progesterona na puberdade?",
+          "Porque quem produz estrogênio e progesterona é o ovário, não o útero."
+        ]
+      ]
+    },
+    {
+      "id": "deck-exame-fisico-quant-1",
+      "discipline": "Semiologia I",
+      "name": "Exame Físico Geral — Quantitativo",
+      "cards": [
+        [
+          "Qual o valor normal da pressão arterial (PA)?",
+          "Até 119/79 mmHg."
+        ],
+        [
+          "O que é o hiato auscultatório na aferição da PA?",
+          "Um intervalo de silêncio entre as fases I e II dos sons de Korotkoff."
+        ],
+        [
+          "Como considerar a PA diastólica se o som não desaparecer completamente?",
+          "Considerar a diastólica no momento em que o som abafa (fase IV)."
+        ],
+        [
+          "Onde se pode palpar o pulso, e qual a frequência normal?",
+          "Radial ou carotídea; normal entre 60-100 bpm."
+        ],
+        [
+          "Como se chamam a frequência de pulso alta e baixa?",
+          "Taquisfigmia (alta) e bradisfigmia (baixa)."
+        ],
+        [
+          "Quais características do pulso devem ser avaliadas, além da frequência?",
+          "Ritmo (rítmico/arrítmico) e amplitude."
+        ],
+        [
+          "O que é hipertermia?",
+          "Falha do termorregulador."
+        ],
+        [
+          "O que é hiperpirexia?",
+          "Alteração no próprio hipotálamo (centro termorregulador)."
+        ],
+        [
+          "A partir de que temperatura se considera febre?",
+          "≥37,8°C."
+        ],
+        [
+          "A partir de que temperatura se considera hipotermia?",
+          "<35°C."
+        ],
+        [
+          "Os locais de aferição de temperatura (axilar, oral, retal) têm o mesmo valor de referência?",
+          "Não — cada local tem tempos e valores de referência diferentes."
+        ],
+        [
+          "Qual a frequência respiratória (FR) normal e como se chamam os desvios?",
+          "12-20 irpm; bradipneia (baixa) e taquipneia (alta)."
+        ],
+        [
+          "Como se deve medir a FR corretamente?",
+          "Por 1 minuto, usando o método da 'distração' (sem o paciente perceber que está sendo contado)."
+        ],
+        [
+          "Como se deve aferir peso e altura corretamente?",
+          "Sem sapatos, com roupas leves, em balança calibrada."
+        ],
+        [
+          "Quais estruturas compõem a anamnese/prontuário?",
+          "ID, QPD, HMA, ISDA, AP, AF, HM, HO, hábitos/vícios, alergias, medicamentos e vacinas."
+        ],
+        [
+          "Cite termos usados no exame físico geral descritivo.",
+          "BEG, descorado/ictérico (em cruzes), hidratado, anictérico, eupneico, eutrófico, afebril, biotipo, vígil/orientado, marcha/fácies atípica."
+        ]
+      ]
+    },
+    {
+      "id": "deck-exame-cv-normal-1",
+      "discipline": "Semiologia I",
+      "name": "Exame Cardiovascular Normal",
+      "cards": [
+        [
+          "O que é dispneia paroxística noturna (DPN)?",
+          "Falta de ar que acorda o paciente à noite."
+        ],
+        [
+          "O que são trepopneia e bendopneia?",
+          "Trepopneia: dispneia que varia com o decúbito lateral; bendopneia: dispneia ao se curvar para frente."
+        ],
+        [
+          "O que é o sinal do cacifo (godet) e como se classifica?",
+          "Depressão que permanece ao pressionar o edema; classificado de 1+ a 4+."
+        ],
+        [
+          "Onde fica o ângulo de Louis e qual sua importância?",
+          "Corresponde ao nível do 2º espaço intercostal (EIC) — referência anatômica para localizar os focos de ausculta."
+        ],
+        [
+          "Quais posições são usadas no exame cardiovascular e para que servem?",
+          "Decúbito dorsal a 30° (padrão); decúbito lateral esquerdo (intensifica sopros mitrais); sentado inclinado para frente (detecta sopros aórticos)."
+        ],
+        [
+          "Como se avalia a turgência jugular e qual o valor normal?",
+          "A 45°, medindo até o ângulo de Louis; deve ser <3cm."
+        ],
+        [
+          "Onde se localiza o ictus cordis normalmente?",
+          "5º espaço intercostal esquerdo, na linha hemiclavicular."
+        ],
+        [
+          "O que se avalia na palpação cardíaca?",
+          "Ictus (com as polpas digitais), impulsos ventriculares e frêmitos (ausentes no normal)."
+        ],
+        [
+          "Onde fica o foco aórtico e o foco pulmonar de ausculta?",
+          "Aórtico: 2º EIC direito; pulmonar: 2º EIC esquerdo."
+        ],
+        [
+          "Onde fica o foco aórtico acessório e o foco tricúspide?",
+          "Aórtico acessório: 3º EIC esquerdo; tricúspide: 4-5º EIC, borda esternal inferior."
+        ],
+        [
+          "Onde fica o foco mitral?",
+          "5º EIC, linha hemiclavicular."
+        ],
+        [
+          "O que gera a bulha B1 e o que ela marca?",
+          "Fechamento das valvas atrioventriculares; marca o início da sístole."
+        ],
+        [
+          "O que gera a bulha B2 e o que ela marca?",
+          "Fechamento das valvas semilunares; marca o início da diástole."
+        ],
+        [
+          "O que é o desdobramento fisiológico de B2?",
+          "P2 soando depois de A2, normal durante a inspiração."
+        ],
+        [
+          "Quais pulsos centrais e periféricos são avaliados no exame vascular?",
+          "Centrais: temporal, carotídeo, braquial. Periféricos: radial, femoral, poplíteo, pedioso, tibial posterior."
+        ],
+        [
+          "O que se avalia em cada pulso periférico?",
+          "Frequência, ritmo, amplitude e simetria (escala de 0 a 4+)."
+        ]
+      ]
+    },
+    {
+      "id": "deck-exame-fisico-qual-1",
+      "discipline": "Semiologia I",
+      "name": "Exame Físico Geral — Qualitativo",
+      "cards": [
+        [
+          "O que é a ectoscopia?",
+          "A impressão geral do paciente — primeira etapa do exame físico, sem ser um julgamento."
+        ],
+        [
+          "Quais os níveis de consciência avaliados (do mais alerta ao menos)?",
+          "Alerta/vígil, sonolento, confuso, obnubilado, torporoso, comatoso."
+        ],
+        [
+          "O que se avalia na 'qualidade' da consciência?",
+          "Orientação temporal/espacial, contato/cooperação e comunicação."
+        ],
+        [
+          "O que é uma posição antálgica?",
+          "Posição adotada pelo paciente para aliviar dor."
+        ],
+        [
+          "Cite exemplos de fácies típicas.",
+          "Fácies de dor, hipo/hipertireoidea, cushingoide, hipocrática, acromegálica, esclerodérmica, renal e leonina."
+        ],
+        [
+          "Como se avaliam os parâmetros qualitativos (corado, hidratação, icterícia)?",
+          "Numa escala de cruzes (+ a ++++)."
+        ],
+        [
+          "Como se diferencia cianose central de periférica?",
+          "Central afeta mucosas e extremidades (hipoxemia sistêmica); periférica afeta só extremidades (má perfusão local)."
+        ],
+        [
+          "Quais os biotipos possíveis?",
+          "Brevilíneo, mediolíneo e longilíneo."
+        ],
+        [
+          "Quais os estados nutricionais possíveis?",
+          "Caquexia, eutrofia e obesidade."
+        ],
+        [
+          "O que significa o mnemônico BEG e CHAAAE?",
+          "Bom estado geral, corado, hidratado, anictérico, acianótico, afebril, eupneico."
+        ]
+      ]
+    },
+    {
+      "id": "deck-cabeca-pescoco-1",
+      "discipline": "Semiologia I",
+      "name": "Cabeça e Pescoço",
+      "cards": [
+        [
+          "O que significa pupila isocórica?",
+          "As duas pupilas têm o mesmo tamanho."
+        ],
+        [
+          "Como se examina o fundo de olho?",
+          "Em ambiente escuro, com o auxílio de uma lanterna (oftalmoscópio)."
+        ],
+        [
+          "Como se faz a otoscopia corretamente?",
+          "Puxando o pavilhão auricular para cima e para trás."
+        ],
+        [
+          "Como é o tímpano normal?",
+          "Transparente, perolado, brilhante, reflete luz (triângulo luminoso)."
+        ],
+        [
+          "O que é otorreia?",
+          "Saída de pus pelo ouvido, após perfuração do tímpano por otite."
+        ],
+        [
+          "O que é epistaxe?",
+          "Sangramento nasal."
+        ],
+        [
+          "Como se avalia o palato mole?",
+          "Pedindo ao paciente para dizer 'Ahh'."
+        ],
+        [
+          "Com que índice se avalia a língua/via aérea na boca?",
+          "Índice de Mallampati."
+        ],
+        [
+          "Quais características dos linfonodos devem ser avaliadas?",
+          "Localização, número, tamanho, dor, consistência, aderência, sinais flogísticos, coalescência e fistulização."
+        ],
+        [
+          "Quais características sugerem maior suspeição de malignidade num linfonodo?",
+          "Localização supraclavicular, aumento progressivo, aderido, consistência dura/pétrea, indolor, duração >4 semanas, idade >40 anos e sintomas B."
+        ],
+        [
+          "Qual a sequência do exame da tireoide?",
+          "Inspeção estática → inspeção dinâmica (ao deglutir) → palpação → ausculta (sopro)."
+        ],
+        [
+          "O que é o sinal de Pemberton e quando é pesquisado?",
+          "Sinal pesquisado quando há suspeita de bócio."
+        ]
+      ]
+    },
+    {
+      "id": "deck-anamnese-1",
+      "discipline": "Semiologia I",
+      "name": "Anamnese",
+      "cards": [
+        [
+          "Qual a diferença entre sintoma e sinal?",
+          "Sintoma é subjetivo (relatado pelo paciente, na anamnese); sinal é objetivo (encontrado/medido no exame físico)."
+        ],
+        [
+          "O que é uma síndrome?",
+          "Um conjunto associado de sintomas e sinais."
+        ],
+        [
+          "Qual a sequência lógica sintomas+sinais → diagnóstico?",
+          "Sintomas + Sinais = Síndrome → Diagnóstico."
+        ],
+        [
+          "Quais os objetivos da anamnese?",
+          "Compreender a queixa, levantar hipóteses, direcionar o exame físico e planejar investigação/conduta."
+        ],
+        [
+          "Quais técnicas ajudam a criar vínculo na anamnese?",
+          "Preparar o ambiente, se apresentar, ter escuta ativa, postura acolhedora e respeitar o tempo do paciente."
+        ],
+        [
+          "Qual a ordem recomendada dos tipos de pergunta na entrevista?",
+          "Abertas (iniciam a narrativa) → focadas (aprofundam) → fechadas (confirmam/delimitam)."
+        ],
+        [
+          "O que compõe a QPD?",
+          "O que o paciente relata + há quanto tempo, nas palavras do próprio paciente."
+        ],
+        [
+          "Como estruturar a HMA (narrativa cronológica)?",
+          "Começar aberto → construir cronologia → caracterizar o sintoma → fechar lacunas (ISDA)."
+        ],
+        [
+          "Quais os itens da caracterização da queixa na HMA?",
+          "Localização, características, intensidade, cronologia, circunstâncias, fatores de melhora/piora e manifestações associadas."
+        ],
+        [
+          "Quais categorias compõem os antecedentes pessoais?",
+          "Clínico, cirúrgico, ginecológico/obstétrico, hemotransfusões e exposição a TB/viagens."
+        ],
+        [
+          "O que se pergunta nos antecedentes familiares?",
+          "Doenças de parentes de 1º grau, destacando as mais relevantes."
+        ],
+        [
+          "Como se calcula a carga tabágica (maços-ano)?",
+          "1 maço = 20 cigarros = 20mg de nicotina; multiplica-se maços/dia pelos anos de uso."
+        ],
+        [
+          "Quantos cigarros equivalem a 1 cigarro de palha?",
+          "4 a 6 cigarros comuns."
+        ],
+        [
+          "O que é importante saber ao perguntar sobre uso de álcool?",
+          "A bebida específica consumida."
+        ]
+      ]
+    },
+    {
+      "id": "deck-trato-respiratorio-1",
+      "discipline": "Semiologia I",
+      "name": "Trato Respiratório",
+      "cards": [
+        [
+          "Qual vértebra é usada como referência na base do pescoço?",
+          "C7 (proeminente)."
+        ],
+        [
+          "Qual a ordem do exame do trato respiratório?",
+          "Inspeção → palpação → percussão → ausculta."
+        ],
+        [
+          "O que é o teste de Schamroth e para que serve?",
+          "Avalia baqueteamento digital."
+        ],
+        [
+          "Cite os tipos de tórax na inspeção estática.",
+          "Normal, infundibuliforme (pectus excavatum), cariniforme (pombo), tonel (barril) e cifótico."
+        ],
+        [
+          "O que se avalia na inspeção dinâmica do tórax?",
+          "Amplitude (=FR), ritmo, esforço respiratório e padrão (torácico/abdominal/costal)."
+        ],
+        [
+          "Cite padrões respiratórios anormais.",
+          "Bradi/taquipneia, Cheyne-Stokes, Kussmaul, Biot, suspiro e atáxica."
+        ],
+        [
+          "O que se avalia na palpação torácica?",
+          "Sensibilidade (dor), elasticidade, expansibilidade e frêmito toracovocal (FTV)."
+        ],
+        [
+          "Como se testa o frêmito toracovocal (FTV)?",
+          "Pedindo ao paciente para dizer '33' enquanto se palpa o tórax."
+        ],
+        [
+          "Como se realiza a percussão torácica e quais os 3 sons possíveis?",
+          "Um dedo golpeia outro sobre o tórax; som claro pulmonar (normal), maciço (redução de ar) e timpânico (excesso de ar no espaço pleural)."
+        ],
+        [
+          "Quais são os sons respiratórios normais na ausculta?",
+          "Traqueal, brônquico e murmúrio vesicular."
+        ],
+        [
+          "O que indica estridor na ausculta?",
+          "Obstrução de via aérea alta."
+        ],
+        [
+          "O que indicam roncos/sibilos?",
+          "Estreitamento de brônquios/bronquíolos."
+        ],
+        [
+          "Qual a diferença entre estertores finos e grossos?",
+          "Finos = líquido alveolar; grossos = secreção em vias de maior calibre."
+        ],
+        [
+          "O que é atrito pleural?",
+          "Som de roçar dos folhetos pleurais."
+        ],
+        [
+          "O que são broncofonia, pectoriloquia e egofonia (ressonância da voz)?",
+          "Broncofonia = som mais alto; pectoriloquia = nitidez aumentada; egofonia = voz caprina (nasalada)."
+        ]
+      ]
+    },
+    {
+      "id": "deck-medidas-epidem-1",
+      "discipline": "Saúde das Populações",
+      "name": "Medidas Epidemiológicas",
+      "cards": [
+        [
+          "O que é prevalência?",
+          "Proporção de pessoas com uma condição num momento ou período (prevalência-ponto vs prevalência-período)."
+        ],
+        [
+          "O que é incidência?",
+          "Proporção de expostos inicialmente livres da doença que desenvolvem o desfecho (novos casos)."
+        ],
+        [
+          "(Caso Hepatite C) Qual a prevalência-ponto em 2011 e em 2025 (por 100.000 hab)?",
+          "2011: 1.500 por 100.000; 2025: 550 por 100.000."
+        ],
+        [
+          "Se o inquérito de 2025 usasse só sorologia anti-HCV (sem confirmar RNA), a prevalência esperada seria maior ou menor?",
+          "Muito maior — a sorologia capta também infecções já resolvidas, não só as ativas."
+        ],
+        [
+          "(Caso Hepatite C) Qual foi a incidência anual média do período, e como ela se comportou?",
+          "120 por 100.000/ano, permanecendo estável."
+        ],
+        [
+          "Qual fórmula relaciona prevalência, incidência e duração da doença?",
+          "Prevalência = Incidência × Duração."
+        ],
+        [
+          "Se a incidência é constante mas a prevalência de infecção ativa caiu 1/3, o que explica essa queda?",
+          "Redução da duração média da doença (ex: tratamentos que curam, como os DAAs para hepatite C)."
+        ],
+        [
+          "Se um tratamento só prolongasse a sobrevida sem curar (análogo ao HIV/TARV), o que aconteceria com a prevalência?",
+          "Aumentaria — a duração da doença aumenta sem reduzir a incidência."
+        ]
+      ]
+    },
+    {
+      "id": "deck-metodos-epidem-1",
+      "discipline": "Saúde das Populações",
+      "name": "Métodos Epidemiológicos",
+      "cards": [
+        [
+          "Quais os objetivos da epidemiologia?",
+          "Determinar a extensão da doença, identificar causa/etiologia e fatores de risco, estudar a história natural/progressão, desenvolver políticas públicas e avaliar medidas preventivas/terapêuticas."
+        ],
+        [
+          "O que é o modelo de causa suficiente de Rothman?",
+          "Causa suficiente = causas componentes + causa necessária (se houver)."
+        ],
+        [
+          "(John Snow, cólera 1854) Por que a cervejaria da Broad Street não teve casos?",
+          "Porque tinha sua própria fonte de água (não bebiam da bomba contaminada)."
+        ],
+        [
+          "(Caso Rothman) Como descrever a causa de óbito de um idoso com múltiplas comorbidades que morre de pneumonia por influenza?",
+          "Múltiplos fatores/causas componentes contribuíram (determinantes sociais, multimorbidade, status vacinal, cuidado); a infecção por influenza é a causa necessária para esse desfecho específico."
+        ],
+        [
+          "Qual o objetivo de uma coorte que acompanha por mais de 10 anos pacientes soropositivos para Chagas?",
+          "Descrever a história natural e o prognóstico da doença."
+        ],
+        [
+          "O que caracteriza a transição epidemiológica ao comparar países com melhora socioeconômica?",
+          "Troca o predomínio de doenças comunicáveis para doenças crônicas não comunicáveis."
+        ],
+        [
+          "O que é necessário para comparar validamente a carga de doença entre dois países?",
+          "Padronização por idade e relativização pelo tamanho populacional."
+        ],
+        [
+          "Qual o objetivo de um estudo antes/depois de triagem por IA para IAM?",
+          "Avaliar o impacto do novo modelo de triagem."
+        ],
+        [
+          "O que uma curva semanal de casos de dengue ao longo dos anos costuma revelar?",
+          "Que é uma doença sazonal, com presença de períodos epidêmicos."
+        ],
+        [
+          "Quais medidas de dengue são exclusivamente preventivas?",
+          "Eliminação de criadouros, larvicida e vacinação (excluindo busca ativa/teste, leitos de hidratação e notificação, que são vigilância/tratamento)."
+        ],
+        [
+          "O que caracteriza a reabilitação motora/fonoaudiológica de um paciente pós-AVC?",
+          "Prevenção terciária."
+        ]
+      ]
+    },
+    {
+      "id": "deck-historia-natural-doenca-1",
+      "discipline": "Saúde das Populações",
+      "name": "História Natural da Doença",
+      "cards": [
+        [
+          "O que é taxa de ataque?",
+          "Casos/expostos, num determinado momento."
+        ],
+        [
+          "O que é mediana de duração dos sintomas, e de quem se refere?",
+          "Do hospedeiro — mediana de tempo em que os sintomas persistem."
+        ],
+        [
+          "O que é mediana de incubação, e de quem se refere?",
+          "Do agente — mediana de tempo entre exposição e início dos sintomas."
+        ],
+        [
+          "Cite modos de transmissão direta e um exemplo de cada.",
+          "Contato direto (HIV), disseminação de gotículas (influenza), exposição a agente no ambiente (tétano), mordedura (raiva) e transplacentária/perinatal (sífilis congênita, hepatite B)."
+        ],
+        [
+          "Cite modos de transmissão indireta e um exemplo de cada.",
+          "Vetor biológico (dengue), hospedeiro intermediário (Chagas), vetor mecânico (moscas — febre tifoide/shigelose), veículo mecânico (cólera-água, salmonelose-alimento, hepatite B-agulhas) e aerossol/airborne (tuberculose, sarampo)."
+        ],
+        [
+          "Qual o tamanho dos núcleos de gotícula na transmissão airborne?",
+          "Menores que 5 μm."
+        ],
+        [
+          "Qual a sequência da pirâmide da tuberculose?",
+          "TB clínica (sintomas) → TB subclínica → TB infecciosa adicional (detectável por métodos extras) → TB não infecciosa (só detectável por imagem)."
+        ],
+        [
+          "(Norovírus escolar) Qual foi a taxa de ataque global?",
+          "150/440 = 34,1%."
+        ],
+        [
+          "(Norovírus escolar) Como se identificou o momento provável da exposição primária?",
+          "Retrocedendo a mediana de incubação (33h) a partir do pico da curva epidêmica — apontou para o almoço de terça-feira, 13/05, às 12h (cardápio B)."
+        ],
+        [
+          "(Norovírus escolar) Como a análise estratificada revelou o verdadeiro veículo do surto?",
+          "O efeito da salada de maionese persistiu em ambos os estratos de suco; o efeito do suco desapareceu ao estratificar por salada — o veículo real era a salada de maionese (o suco era um confundidor por co-ingestão)."
+        ],
+        [
+          "(Norovírus escolar) Como foi a transmissão na 1ª onda?",
+          "Fecal-oral indireta por veículo comum (alimento contaminado por manipulador infectado)."
+        ],
+        [
+          "(Norovírus escolar) Como foi a transmissão na 2ª onda (casos domiciliares)?",
+          "Transmissão propagada pessoa-a-pessoa, incluindo alunos assintomáticos (RT-PCR+) como transmissores silenciosos."
+        ],
+        [
+          "(Norovírus escolar) Qual foi a taxa de ataque secundária domiciliar?",
+          "120/500 = 24%."
+        ],
+        [
+          "(Caso do pernil) Com incubação de 8-12h, diarreia+cólicas sem febre/vômito, resolução <24h, qual o agente mais provável?",
+          "Clostridium perfringens."
+        ],
+        [
+          "(Epidemia interior, ~1.500 casos em 5 meses, gerações de 2-3 semanas, acompanha chuvas) Qual o padrão de transmissão?",
+          "Exposição múltipla e propagada por vetor — cada geração de casos infecta novos vetores, gerando ondas sucessivas (não é fonte única pontual)."
+        ]
+      ]
+    },
+    {
+      "id": "deck-fertilizacao-blastocisto-1",
+      "discipline": "Biologia da Reprodução e do Desenvolvimento I",
+      "name": "Fertilização, Formação de Blastocisto e Implantação",
+      "cards": [
+        [
+          "O que o estrogênio faz no ciclo ovariano/uterino, antes do pico de LH?",
+          "Deixa o endométrio em fase proliferativa e o muco cervical menos espesso; estimula a adeno-hipófise a secretar LH."
+        ],
+        [
+          "O que acontece na metade do ciclo, com o pico de LH?",
+          "O oócito completa a meiose I e inicia a meiose II; há produção de progesterona pelo corpo lúteo e ruptura folicular (ovulação)."
+        ],
+        [
+          "Quanto tempo antes da ovulação a meiose I é completada?",
+          "3 horas antes de iniciar a meiose II."
+        ],
+        [
+          "O que causa a expulsão do oócito na ovulação?",
+          "Colagenases e prostaglandinas causam contração, expulsando o oócito com as células do cúmulo oóforo (coroa radiada); surge o estigma."
+        ],
+        [
+          "Em que o corpo lúteo se transforma e o que ele produz?",
+          "Células da granulosa viram células luteínicas, que produzem estrogênio e progesterona, preparando a mucosa uterina na fase secretora."
+        ],
+        [
+          "O que acontece com o corpo lúteo se não houver fertilização?",
+          "Regride, formando o corpo albicans, e a progesterona cai."
+        ],
+        [
+          "O que mantém o corpo lúteo caso haja fertilização?",
+          "O hCG do trofoblasto mantém o corpo lúteo gravídico até o 4º mês."
+        ],
+        [
+          "O que é a capacitação espermática, e onde ocorre?",
+          "Um processo que ocorre no caminho do espermatozoide pela tuba uterina, preparando-o para a fertilização."
+        ],
+        [
+          "O que é a reação acrossômica?",
+          "Liberação de enzimas do acrossomo do espermatozoide."
+        ],
+        [
+          "Onde ocorre a fecundação e quais suas fases?",
+          "Na ampola da tuba; fases: penetração da coroa radiada → penetração da zona pelúcida → fusão das membranas."
+        ],
+        [
+          "O que caracteriza a reação do oócito após a fecundação?",
+          "A zona pelúcida se torna impenetrável, completa-se a 2ª divisão meiótica, formam-se os pró-núcleos masculino e feminino (haploides), ocorre fusão nuclear e duplicação cromossômica, formando o zigoto."
+        ],
+        [
+          "Como ocorre a clivagem até a mórula?",
+          "2 blastômeros → 8 células (compactação, com células internas e externas) → 16 células no 3º dia (mórula)."
+        ],
+        [
+          "O que se forma no blastocisto?",
+          "A blastocele (cavidade), a massa celular interna (embrioblasto) e a massa celular externa (trofoblasto)."
+        ],
+        [
+          "Quando ocorre a implantação, e o que é usado nesse processo?",
+          "No 6º dia; as células do trofoblasto usam L-selectina e integrinas, enquanto o endométrio expõe receptores de carboidratos."
+        ]
+      ]
+    },
+    {
+      "id": "deck-regulacao-genetica-dev-1",
+      "discipline": "Biologia da Reprodução e do Desenvolvimento I",
+      "name": "Regulação Genética no Desenvolvimento Inicial",
+      "cards": [
+        [
+          "Como está a cromatina no espermatozoide maduro, e o que acontece após a fertilização?",
+          "Altamente condensada; descondensa após a fertilização, formando o pronúcleo masculino."
+        ],
+        [
+          "O que acontece no núcleo feminino após a fertilização?",
+          "Completa a meiose II e libera o 2º corpo polar, formando o pronúcleo feminino."
+        ],
+        [
+          "O que controla o crescimento dos pronúcleos, e o que acontece com o DNA neles?",
+          "Fatores citoplasmáticos do ovo controlam o crescimento; o DNA se replica (cromátides-irmãs)."
+        ],
+        [
+          "O que acontece quando os pronúcleos entram em contato?",
+          "Ocorre fusão cromossômica, e o fuso mitótico se prepara para a primeira divisão."
+        ],
+        [
+          "O que são genes de efeito materno (MEG)?",
+          "Genes que controlam o desenvolvimento inicial enquanto o genoma do próprio zigoto ainda está silencioso."
+        ],
+        [
+          "O que é a transição MEG → EGA?",
+          "A transição gradual do controle por genes de efeito materno (MEG) para a ativação do genoma embrionário (EGA)."
+        ],
+        [
+          "Por que gametas são considerados células altamente diferenciadas?",
+          "Porque, apesar disso, tanto o genoma materno quanto o paterno são essenciais para a embriogênese normal (reprogramação epigenética)."
+        ],
+        [
+          "O que ocorre na 1ª onda de desmetilação total?",
+          "Gera a máxima plasticidade do genoma (exceto para genes imprintados)."
+        ],
+        [
+          "Quando ocorre a 2ª onda de desmetilação total?",
+          "Nas células germinativas do zigoto."
+        ],
+        [
+          "Quais os 3 processos do desenvolvimento embrionário?",
+          "Divisão celular, diferenciação celular e morfogênese."
+        ],
+        [
+          "O que são células totipotentes e pluripotentes?",
+          "Totipotentes: têm total oportunidade de desenvolvimento; pluripotentes: podem gerar muitos tipos celulares."
+        ],
+        [
+          "Qual a diferença entre desenvolvimento regulativo e em mosaico?",
+          "Regulativo: equivalência funcional entre células; em mosaico: perda de plasticidade."
+        ],
+        [
+          "O que são morfógenos?",
+          "Substâncias que estabelecem distribuição e geram respostas celulares distintas dependendo da dose."
+        ],
+        [
+          "Qual a função dos genes de efeito materno e de segmentação?",
+          "Segmentar e polarizar o zigoto (segmentação = formação dos brotos dos membros)."
+        ],
+        [
+          "Qual a função dos genes homeóticos, e quais são citados?",
+          "Fazem a diferenciação; incluem os genes HOX (com homeodomínios), Sonic Hedgehog e PAX."
+        ]
+      ]
+    },
+    {
+      "id": "deck-calculo-amostral-1",
+      "discipline": "Conhecimento Médico III",
+      "name": "Cálculo Amostral",
+      "cards": [
+        [
+          "Quando não é possível realizar o cálculo amostral?",
+          "Por limite de recursos, prazo, ou falta de informações (ex: estudo inédito)."
+        ],
+        [
+          "O que é erro amostral?",
+          "A diferença entre o resultado observado na amostra e o resultado real."
+        ],
+        [
+          "Como o erro amostral desejado afeta o tamanho da amostra?",
+          "Quanto menor o erro amostral aceito, maior a amostra necessária."
+        ],
+        [
+          "O que é tamanho do efeito?",
+          "A diferença esperada entre o desfecho de 2 grupos."
+        ],
+        [
+          "Como o tamanho do efeito afeta o n amostral?",
+          "Quanto maior o tamanho do efeito, menor a amostra necessária."
+        ],
+        [
+          "O que é heterogeneidade, no contexto do cálculo amostral?",
+          "A variabilidade dos dados observados na amostra."
+        ],
+        [
+          "Como a heterogeneidade afeta o n amostral?",
+          "Quanto maior a variabilidade, maior a amostra necessária."
+        ],
+        [
+          "No planejamento de um estudo, o que se usa para calcular o n amostral?",
+          "Variabilidade + tamanho do efeito."
+        ],
+        [
+          "Na análise de dados, o que se obtém a partir da variabilidade e do n amostral?",
+          "As estimativas (do tamanho do efeito real)."
+        ],
+        [
+          "Qual a fórmula do cálculo amostral para proporções?",
+          "n = Z² × p×(1−p) / EA²."
+        ],
+        [
+          "Qual a fórmula do cálculo amostral para médias?",
+          "n = (Z × DP / EA)²."
+        ],
+        [
+          "Como estimar o desvio padrão (DP) quando só se conhece o valor mínimo e máximo possível de uma variável?",
+          "DP ≈ (máximo − mínimo) / 4."
+        ],
+        [
+          "(Caso hérnia de disco) Com prevalência de 46%, IC95% e erro amostral de 5%, qual o n calculado?",
+          "382 pacientes."
+        ],
+        [
+          "(Mesmo caso, mas com prevalência de 25% em vez de 46%) Qual o novo n calculado, e por quê caiu?",
+          "288 — quanto mais perto de 50% está a prevalência, maior a variabilidade p×(1-p) e, portanto, maior o n necessário; com p mais distante de 50%, o n cai."
+        ],
+        [
+          "(Caso α-talassemia) Com média 4,8, DP 0,6, IC95% e erro de 0,2, qual o n calculado?",
+          "35 crianças."
+        ],
+        [
+          "(Caso prótese de quadril, tempo mín. 2h30 e máx. 20h) Qual o ponto médio estimado do tempo de preparo?",
+          "11h15min ((2,5+20)/2 = 11,25h)."
+        ]
+      ]
+    },
+    {
+      "id": "deck-reprodutibilidade-concordancia-1",
+      "discipline": "Conhecimento Médico III",
+      "name": "Reprodutibilidade e Concordância",
+      "cards": [
+        [
+          "Para que tipo de variável se usa o coeficiente Kappa?",
+          "Variáveis qualitativas."
+        ],
+        [
+          "Para que tipo de variável se usa o Kappa Ponderado, e o que ele faz de diferente do Kappa comum?",
+          "Variáveis ordinais (que podem ser unidas/agrupadas); coloca pesos diferentes conforme a gravidade da discordância."
+        ],
+        [
+          "Quando se usa o Kappa Generalizado?",
+          "Quando há mais de 2 observadores, métodos ou momentos de avaliação."
+        ],
+        [
+          "O que significam Kappa = -1, 0 e 1?",
+          "-1 = discordância total; 0 = apenas a concordância esperada pelo acaso; 1 = concordância total."
+        ],
+        [
+          "Para que tipo de variável se usa o ICC (coeficiente de correlação intraclasse)?",
+          "Variáveis quantitativas."
+        ],
+        [
+          "O que o ICC representa?",
+          "A proporção da variabilidade esperada sobre a variabilidade total."
+        ],
+        [
+          "O que o gráfico de Bland-Altman mostra?",
+          "Contrasta a diferença entre dois métodos com a média dos dois métodos, para variáveis quantitativas."
+        ],
+        [
+          "(Caso Dor em Idosos, PACSLAC-P, 3 observadores + reteste por 1 deles em 14 dias) Qual afirmação está correta sobre a reprodutibilidade?",
+          "Gráficos de Bland-Altman podem ser úteis para avaliar se a reprodutibilidade depende da intensidade da dor (as outras opções estão incorretas: correlação linear não é suficiente para avaliar reprodutibilidade, Kappa não é a melhor opção para uma variável quantitativa/contínua, e ICC — não correlação — seria o certo se o escore fosse categorizado)."
+        ]
+      ]
+    }
+  ]
+}
