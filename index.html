@@ -58,11 +58,7 @@
   textarea.text-area { width: 100%; font-size: 15px; padding: 10px 12px; border: 1.5px solid rgba(27,77,74,0.35); border-radius: 3px; resize: vertical; color: var(--ink); background: #FFFEFA; font-family: 'Inter', sans-serif; }
   .btn-primary { background: var(--ink); color: var(--paper); border: none; border-radius: 3px; padding: 12px 20px; font-size: 14.5px; font-weight: 600; margin-top: 16px; }
   .form-card { background: #FFFDF7; border: 1.5px solid var(--ink); border-radius: 4px; padding: 20px; box-shadow: 3px 3px 0 rgba(27,77,74,0.15); }
-  .card-list-item { font-size: 13.5px; padding: 8px 12px; border-left: 3px solid var(--green); background: rgba(143,188,90,0.08); margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
-  .card-list-front { flex: 1; min-width: 0; }
-  .move-col { display: flex; flex-direction: column; gap: 1px; flex-shrink: 0; }
-  .move-btn { background: transparent; border: 1.5px solid rgba(27,77,74,0.35); color: var(--ink); border-radius: 3px; padding: 1px 6px; font-size: 10px; line-height: 1.6; }
-  .move-btn-disabled { background: transparent; border: 1.5px solid rgba(27,77,74,0.12); color: rgba(27,77,74,0.25); border-radius: 3px; padding: 1px 6px; font-size: 10px; line-height: 1.6; cursor: default; }
+  .card-list-item { font-size: 13.5px; padding: 8px 12px; border-left: 3px solid var(--green); background: rgba(143,188,90,0.08); margin-bottom: 6px; }
   .study-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 24px; flex-wrap: wrap; gap: 6px; }
   .card-stage { perspective: 1200px; height: 300px; cursor: pointer; margin-bottom: 20px; }
   .flashcard { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.45s cubic-bezier(.4,.2,.2,1); }
@@ -422,19 +418,6 @@ function addCard() {
   render();
 }
 
-function moveCard(deckId, cardId, direction) {
-  const deck = decks[deckId];
-  if (!deck) return;
-  const idx = deck.cards.findIndex(c => c.id === cardId);
-  const swapIdx = direction === "up" ? idx - 1 : idx + 1;
-  if (idx === -1 || swapIdx < 0 || swapIdx >= deck.cards.length) return;
-  const nextCards = [...deck.cards];
-  [nextCards[idx], nextCards[swapIdx]] = [nextCards[swapIdx], nextCards[idx]];
-  decks[deckId] = { ...deck, cards: nextCards };
-  saveDecks();
-  render();
-}
-
 function addTopic() {
   if (!formTopic.trim() || !formDiscipline.trim()) return;
   const id = `deck-${Date.now()}`;
@@ -606,14 +589,7 @@ function renderNewTopic() {
 
 function renderAdd() {
   const deck = decks[activeDeckId];
-  const cardItems = deck.cards.map((c, idx) => `
-    <div class="card-list-item">
-      <span class="card-list-front">${esc(c.front)}</span>
-      <div class="move-col">
-        <button class="${idx === 0 ? "move-btn-disabled" : "move-btn"}" ${idx === 0 ? "disabled" : ""} data-action="move-card" data-deck="${activeDeckId}" data-card="${c.id}" data-dir="up" title="Mover para cima">▲</button>
-        <button class="${idx === deck.cards.length - 1 ? "move-btn-disabled" : "move-btn"}" ${idx === deck.cards.length - 1 ? "disabled" : ""} data-action="move-card" data-deck="${activeDeckId}" data-card="${c.id}" data-dir="down" title="Mover para baixo">▼</button>
-      </div>
-    </div>`).join("");
+  const cardItems = [...deck.cards].reverse().slice(0,6).map(c => `<div class="card-list-item">${esc(c.front)}</div>`).join("");
   return `
     <div class="container">
       <button class="back-btn" data-action="go-home">‹ voltar</button>
@@ -629,7 +605,7 @@ function renderAdd() {
       </div>
       ${deck.cards.length > 0 ? `
         <div style="margin-top:28px">
-          <div class="subtle">${deck.cards.length} card(s) neste tópico — use as setas pra reordenar</div>
+          <div class="subtle">${deck.cards.length} card(s) neste tópico</div>
           <div style="margin-top:10px">${cardItems}</div>
         </div>` : ""}
     </div>`;
@@ -719,8 +695,6 @@ function attachHandlers() {
         formFront = document.getElementById('input-front').value;
         formBack = document.getElementById('input-back').value;
         addCard();
-      } else if (action === "move-card") {
-        moveCard(el.getAttribute('data-deck'), el.getAttribute('data-card'), el.getAttribute('data-dir'));
       } else if (action === "flip") {
         flipped = !flipped;
         render();
