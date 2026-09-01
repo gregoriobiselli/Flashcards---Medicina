@@ -1372,3 +1372,447 @@
     }
   ]
 }
+{
+  "decks": [
+    {
+      "id": "deck-microambiente-neuronal-1",
+      "discipline": "Saúde e Doença I",
+      "name": "Micro-ambiente Neuronal I",
+      "cards": [
+        [
+          "Quais estruturas envolvem o neurônio no microambiente neuronal?",
+          "Células da glia, líquido cerebral extracelular (LCEC), líquido cefalorraquidiano (LCR), capilares e neurônios adjacentes."
+        ],
+        [
+          "Qual a função das barreiras hemato-encefálica e hemato-liquórica?",
+          "Filtrar a entrada de substâncias no tecido nervoso."
+        ],
+        [
+          "Como é o consumo de energia do cérebro, e qual sua reserva de combustível?",
+          "Alto consumo de energia, mas sem combustível armazenado (glicogênio)."
+        ],
+        [
+          "Quanto de oxigênio e de glicose o cérebro consome em repouso?",
+          "20% do oxigênio e 50% da glicose do corpo."
+        ],
+        [
+          "O que acontece após a interrupção do fluxo sanguíneo cerebral?",
+          "Perda de consciência em até 10 segundos; lesões irreversíveis nos neurônios após 5 a 10 minutos."
+        ],
+        [
+          "Onde o LCR é produzido?",
+          "No plexo coroide."
+        ],
+        [
+          "Como o plexo coroide produz o LCR?",
+          "Por transporte ativo de íons: a bomba Na+/K+-ATPase transporta Na+, a água segue por osmose, formando o LCR."
+        ],
+        [
+          "Como se compara a concentração de proteínas do LCR à do sangue?",
+          "Muito menor no LCR (15-45mg/dL) do que no sangue/plasma (6-8g/dL)."
+        ],
+        [
+          "Como se compara a glicose do LCR à do sangue?",
+          "Cerca de 60-70% da glicemia."
+        ],
+        [
+          "Quantas células o LCR normal costuma ter?",
+          "0-5 células/mm³ (bem menos que o sangue)."
+        ],
+        [
+          "Quais as 3 funções do LCR?",
+          "Proteção mecânica, nutrição e remoção de metabólitos."
+        ],
+        [
+          "Como está o LCR na meningite viral?",
+          "Predomínio linfocitário, glicose normal e discreto aumento de proteínas."
+        ],
+        [
+          "Como está o LCR na meningite bacteriana?",
+          "Pressão de abertura aumentada, predomínio de neutrófilos, hipoglicorraquia e aumento significativo de proteínas."
+        ],
+        [
+          "Como está o LCR na meningite tuberculosa?",
+          "Predomínio linfocitário, glicose muito diminuída, proteínas aumentadas, evolução subaguda."
+        ],
+        [
+          "Quais os 4 mecanismos fisiopatológicos da hipertensão intracraniana?",
+          "Edema cerebral, aumento do volume de LCR (hidrocefalia comunicante), aumento do volume sanguíneo cerebral e massa inflamatória (exsudato)."
+        ],
+        [
+          "Como o edema cerebral causa hipertensão intracraniana?",
+          "Inflamação meníngea aumenta a permeabilidade da barreira hematoencefálica, causando extravasamento de líquido para o parênquima (edema vasogênico)."
+        ],
+        [
+          "Como o aumento do volume de LCR causa hipertensão intracraniana?",
+          "A inflamação bloqueia a absorção do líquor nas granulações aracnoides, gerando hidrocefalia comunicante."
+        ],
+        [
+          "Como o aumento do volume sanguíneo cerebral causa hipertensão intracraniana?",
+          "Vasodilatação reativa e congestão venosa secundárias ao processo inflamatório."
+        ],
+        [
+          "Como a massa inflamatória causa hipertensão intracraniana?",
+          "Acúmulo de exsudato purulento nas meninges (em meningites bacterianas graves) ocupa espaço intracraniano."
+        ],
+        [
+          "Qual o princípio de Monroe-Kellie?",
+          "O crânio é um compartimento fechado; o aumento de volume de qualquer componente (parênquima, LCR ou sangue) deve ser compensado por redução de outro."
+        ],
+        [
+          "O que a curva de Monroe-Kellie mostra sobre a complacência intracraniana?",
+          "A PIC se mantém baixa mesmo com aumento de volume, até certo ponto (fase compensada); depois, pequenos aumentos de volume causam grande elevação da PIC (baixa complacência/descompensação)."
+        ],
+        [
+          "Quais as 3 ondas da onda de PIC normal, em ordem de amplitude?",
+          "P1 (percussion wave) > P2 (tidal wave/complacência) > P3 (dicrotic wave)."
+        ],
+        [
+          "O que indica uma onda de PIC alterada, com P2 maior que P1?",
+          "Perda de complacência ou hipertensão intracraniana."
+        ],
+        [
+          "Qual a progressão da curva de PIC ao longo do tempo (Langfitt)?",
+          "Sem HIC → risco de HIC → HIC → podendo evoluir para morte encefálica (quando a PAM se iguala à PIC)."
+        ],
+        [
+          "Quais as consequências clínicas da hipertensão intracraniana?",
+          "Cefaleia, náuseas e vômitos, papiledema, rebaixamento do nível de consciência e risco de herniação cerebral."
+        ],
+        [
+          "Cite os 6 tipos de hérnia cerebral.",
+          "Hérnia de uncus, hérnia central, hérnia de cíngulo, hérnia transcalvariana, hérnia acima do tronco encefálico e hérnia tonsilar."
+        ],
+        [
+          "Quais as principais complicações da punção lombar?",
+          "Cefaleia (mais comum), dor nas costas, infecção, sangramento e vazamento de LCR (causando cefaleia postural)."
+        ],
+        [
+          "O que a punção lombar pode causar, em relação à pressão intracraniana?",
+          "Hipotensão intracraniana."
+        ],
+        [
+          "O que é o sistema glinfático, e quando atua principalmente?",
+          "Sistema de limpeza do SNC formado por células da glia associadas ao sistema linfático; atua principalmente durante o sono."
+        ],
+        [
+          "Quais os componentes da unidade neurovascular?",
+          "Célula endotelial, membrana basal, astrócito perivascular, neurônios, pericitos e micróglia."
+        ],
+        [
+          "(Caso) LCR turvo, pressão de abertura 320mmH2O, 2.500 células/mm³ com 90% neutrófilos, proteína 180mg/dL e glicose baixa — qual a interpretação mais provável?",
+          "Meningite bacteriana aguda (padrão clássico — diferente da viral, que teria predomínio linfocitário e glicose normal, e da sinusite bacteriana, que não altera o líquor)."
+        ],
+        [
+          "(Caso) Cefaleia pós-punção lombar que piora ao ficar em pé/sentado e melhora ao deitar — qual o mecanismo?",
+          "Redução do volume e da pressão do LCR pela perda de líquor no local da punção, tracionando as estruturas intracranianas sensíveis à dor."
+        ]
+      ]
+    },
+    {
+      "id": "deck-microambiente-neuronal-2",
+      "discipline": "Saúde e Doença I",
+      "name": "Micro-ambiente Neuronal II",
+      "cards": [
+        [
+          "Quais as funções dos astrócitos?",
+          "Guiar a migração de neurônios, regular o pH através do controle do [K+], dar suporte estrutural (espaço entre neurônios), recaptar neurotransmissores e formar a barreira hematoencefálica."
+        ],
+        [
+          "O que o ciclo glutamina/glutamato faz, resumidamente?",
+          "Astrócitos captam o glutamato liberado na sinapse e o convertem em glutamina, que é devolvida ao neurônio pré-sináptico para reciclagem."
+        ],
+        [
+          "Qual a função dos oligodendrócitos?",
+          "Compor a mielina no SNC."
+        ],
+        [
+          "Qual célula compõe a mielina no SNP?",
+          "Célula de Schwann."
+        ],
+        [
+          "Quais as funções da micróglia?",
+          "Ação macrofágica e apresentação de antígenos."
+        ],
+        [
+          "Quando a micróglia aumenta sua capacidade de ação no sistema nervoso?",
+          "Em situações de risco, como isquemia, trauma ou infecção."
+        ],
+        [
+          "Quais as funções das células ependimárias?",
+          "Revestir os ventrículos e o canal central da medula, e participar da circulação do LCR."
+        ],
+        [
+          "Quais fatores metabólicos aumentam o fluxo sanguíneo cerebral?",
+          "Aumento de CO2 e H+ (acidez), redução de O2, e substâncias liberadas pelos astrócitos."
+        ],
+        [
+          "Qual a faixa de pressão arterial média da autorregulação cerebral normal?",
+          "Cerca de 60 a 150 mmHg."
+        ],
+        [
+          "O que acontece com a curva de autorregulação cerebral na hipertensão crônica?",
+          "Se desloca para a direita — a faixa autorregulatória se ajusta para pressões mais altas."
+        ],
+        [
+          "Qual o mecanismo do edema cerebral por concussão/trauma capilar?",
+          "O trauma capilar faz o líquido vazar dos capilares para o tecido cerebral."
+        ],
+        [
+          "Descreva o ciclo vicioso do edema cerebral por compressão vascular.",
+          "Edema comprime o vaso sanguíneo → reduz o fluxo sanguíneo → isquemia cerebral → dilata o vaso → mais edema."
+        ],
+        [
+          "Descreva o ciclo vicioso do edema cerebral por falta de substrato celular.",
+          "Edema comprime o vaso → reduz o fluxo → falta substrato para ATP (bomba Na+/K+) → célula dilata → mais edema."
+        ],
+        [
+          "Qual a cascata de alterações metabólicas causadas pelo TCE?",
+          "Trauma cerebral → liberação excessiva de glutamato → hiperatividade neuronal → despolarização intensa (↑K+, ↑Ca2+) → metabolismo acelerado (↑consumo de glicose) → acidose local (↑H+, ↓pH) → ativação da micróglia (↑inflamação) → aumento da permeabilidade da BHE → neurodegeneração progressiva."
+        ],
+        [
+          "Quais os principais sintomas de hipertensão intracraniana/TCE grave?",
+          "Cefaleia, vômito, alterações pupilares, alterações do estado mental e a tríade de Cushing."
+        ],
+        [
+          "O que é a tríade de Cushing?",
+          "Hipertensão, bradicardia e respiração irregular ou apneia."
+        ],
+        [
+          "Quais as medidas de tratamento da hipertensão intracraniana?",
+          "Cabeceira elevada, hiperventilação temporária (PCO2 alvo 30-35mmHg), substância osmótica concentrada (manitol) e redução do LCR do ventrículo (DVE)."
+        ],
+        [
+          "Quais os 2 tipos de edema no AVC isquêmico, e quando ocorrem?",
+          "Fase inicial: edema citotóxico (falha da bomba Na+/K+-ATPase por falta de ATP, entrada de Na+ e água para dentro das células); depois: edema vasogênico (lesão da BHE aumenta a permeabilidade, extravasando proteínas e líquido para o espaço extracelular)."
+        ],
+        [
+          "Quais as principais características da barreira hematoencefálica?",
+          "Pouca transcitose, maior parte do transporte é ativo, aumenta a proteção aos neurônios e controla o microambiente neuronal."
+        ],
+        [
+          "(Caso) Lesões desmielinizantes do SNC com bandas oligoclonais no LCR — qual célula glial está envolvida na perda de mielina?",
+          "Oligodendrócito (mieliniza o SNC — diferente da célula de Schwann, que mieliniza o SNP)."
+        ],
+        [
+          "(Caso) Nos primeiros minutos após a interrupção do fluxo sanguíneo, qual alteração metabólica ocorre mais diretamente?",
+          "Redução da produção de ATP, com aumento da glicólise anaeróbia e produção de lactato (sem O2, não há mais fosforilação oxidativa)."
+        ]
+      ]
+    },
+    {
+      "id": "deck-cocos-grampos-2",
+      "discipline": "Agente Hospedeiro I",
+      "name": "Cocos Gram Positivos II",
+      "cards": [
+        [
+          "Qual a única espécie de Streptococcus com antígeno do grupo B (Lancefield)?",
+          "Streptococcus agalactiae."
+        ],
+        [
+          "Qual o padrão hemolítico do S. agalactiae?",
+          "Beta-hemólise."
+        ],
+        [
+          "Quantos polissacarídeos capsulares tipo-específicos o S. agalactiae tem?",
+          "9 (Ia, Ib, II a VIII)."
+        ],
+        [
+          "Quais tratos o S. agalactiae coloniza?",
+          "Trato gastrointestinal e geniturinário."
+        ],
+        [
+          "Qual a principal causa de septicemia e meningite bacteriana em recém-nascidos?",
+          "Streptococcus agalactiae."
+        ],
+        [
+          "Como se caracteriza a doença neonatal precoce por S. agalactiae?",
+          "Bacteriemia, pneumonia ou meningite na 1ª semana de vida; adquirida no útero ou ao nascer; indistinguível de sepse por outros germes; mortalidade <5%, mas 15-30% dos sobreviventes de meningite têm sequelas neurológicas."
+        ],
+        [
+          "Como se caracteriza a doença neonatal de início tardio por S. agalactiae?",
+          "Bacteriemia com meningite, entre 1 semana e 3 meses de idade; adquirida de fonte exógena (mãe, outro lactente); mortalidade baixa (~3%), mas complicações neurológicas comuns (25-50%)."
+        ],
+        [
+          "Quais infecções o S. agalactiae causa em mulheres grávidas?",
+          "Endometrite pós-parto, infecção de feridas e infecções do trato urinário; prognóstico excelente com tratamento."
+        ],
+        [
+          "Quais infecções o S. agalactiae causa em homens e mulheres não grávidas?",
+          "Bacteriemia, pneumonia, infecções ósseas/articulares e de pele/tecidos moles; geralmente pacientes mais velhos com condições debilitantes de base."
+        ],
+        [
+          "No diagnóstico do S. agalactiae, o que a cultura em ágar-sangue mostra?",
+          "Beta-hemolíticos, catalase-negativa, resistência à bacitracina; teste CAMP positivo."
+        ],
+        [
+          "O Streptococcus viridans é hemolítico?",
+          "Alfa-hemolíticos e não hemolíticos (gama)."
+        ],
+        [
+          "O que o Streptococcus viridans coloniza, e como adere?",
+          "Orofaringe, sistema digestório e urinário; adesão por dextrano."
+        ],
+        [
+          "Que grupo do S. viridans causa cáries dentárias?",
+          "Grupo Mutans (S. mutans, S. sobrinus)."
+        ],
+        [
+          "Que grupo do S. viridans causa endocardite subaguda e sepse em neutropênicos?",
+          "Grupo Mitis (S. mitis, S. pneumoniae, S. oralis)."
+        ],
+        [
+          "Que grupo do S. viridans causa abscessos no cérebro/orofaringe/cavidade peritoneal?",
+          "Grupo Anginosus."
+        ],
+        [
+          "Que grupo do S. viridans está associado a bacteriemia por câncer gastrointestinal?",
+          "Grupo Bovis (S. gallolyticus subsp. gallolyticus)."
+        ],
+        [
+          "No diagnóstico do S. viridans, o que a cultura em ágar-sangue mostra?",
+          "Catalase-negativo e alfa-hemolítico."
+        ],
+        [
+          "Como se descreve a morfologia do Streptococcus pneumoniae?",
+          "Diplococos em forma de 'chama de vela' (devido à pneumolisina)."
+        ],
+        [
+          "O S. pneumoniae é beta ou alfa-hemolítico?",
+          "Parece beta-hemolítico, mas na verdade é alfa-hemolítico."
+        ],
+        [
+          "Quantos sorotipos de S. pneumoniae existem, e o que os diferencia?",
+          "Mais de 90, pela cápsula polissacarídica (os mais comuns estão na vacina polivalente)."
+        ],
+        [
+          "Onde o S. pneumoniae coloniza normalmente, e para onde pode se disseminar (causando doença)?",
+          "Coloniza a orofaringe; pode se disseminar para pulmões, seios paranasais e orelha média, ou parasitar tecidos distais pelo sangue."
+        ],
+        [
+          "Quais os fatores de virulência do S. pneumoniae?",
+          "Proteínas adesivas de superfície, cápsula (antifagocítica, recobre os PAMPs), protease IgA (neutraliza a IgA) e pneumolisina (liga-se ao colesterol da membrana e cria poros)."
+        ],
+        [
+          "Qual o mecanismo de patogenicidade do S. pneumoniae?",
+          "Adesão e invasão (geralmente após infecção viral)."
+        ],
+        [
+          "Como ocorre a pneumonia pneumocócica, e qual sua mortalidade?",
+          "Bactérias se multiplicam nos espaços alveolares após aspiração; início abrupto com febre alta, tosse produtiva e pleurisia; mortalidade geral ~5%."
+        ],
+        [
+          "Como se caracteriza a pneumonia em pacientes esplênicos?",
+          "Doença pneumocócica grave, com diminuição da eliminação de bactérias do sangue; curso fulminante e alta mortalidade."
+        ],
+        [
+          "Como ocorrem sinusite e otite média por S. pneumoniae, e por qual mecanismo?",
+          "Por contiguidade, geralmente após infecção viral do trato respiratório superior; otite mais comum em crianças, sinusite em qualquer idade."
+        ],
+        [
+          "Como ocorre a meningite por S. pneumoniae, e qual sua gravidade comparada a outros germes?",
+          "Por contiguidade ou hematogênese; mortalidade e déficits neurológicos 4-20x mais comuns que meningite por outros germes."
+        ],
+        [
+          "Em que frequência a bacteriemia ocorre na pneumonia e na meningite pneumocócica?",
+          "25-30% dos casos de pneumonia e mais de 80% dos casos de meningite."
+        ],
+        [
+          "No diagnóstico do S. pneumoniae, o que a cultura em ágar-sangue mostra?",
+          "Catalase-negativo, alfa-hemolítico e suscetibilidade à optoquina."
+        ],
+        [
+          "(Caso) Homem de 75 anos com pneumonia após quadro viral; bacterioscopia do escarro mostra cocos gram-positivos aos pares, alfa-hemolíticos — qual o agente provável?",
+          "Streptococcus pneumoniae."
+        ],
+        [
+          "Como se organiza o Enterococcus, e é catalase positivo ou negativo?",
+          "Gram-positivo, em pares e cadeias curtas; catalase-negativo."
+        ],
+        [
+          "Qual o antígeno de grupo (Lancefield) do Enterococcus?",
+          "Grupo D."
+        ],
+        [
+          "A que antibiótico o Enterococcus é frequentemente resistente, principalmente nos hospitais?",
+          "Vancomicina (VRE — Enterococcus resistente à vancomicina)."
+        ],
+        [
+          "Onde o Enterococcus coloniza, e onde é encontrado?",
+          "Intestino e trato gastrointestinal; achado nas fezes."
+        ],
+        [
+          "Qual o sítio mais comum de infecção por Enterococcus?",
+          "Trato urinário (cistite, com ou sem pielonefrite), frequentemente associada a cateterização."
+        ],
+        [
+          "Como são as infecções peritoneais por Enterococcus?",
+          "Geralmente polimicrobianas, associadas ao extravasamento de bactérias intestinais por trauma ou doença que compromete o revestimento intestinal."
+        ],
+        [
+          "Por que a endocardite por Enterococcus é particularmente grave?",
+          "Pela resistência frequente aos antibacterianos mais usados."
+        ]
+      ]
+    },
+    {
+      "id": "deck-tabagismo-1",
+      "discipline": "Atenção Primária à Saúde III",
+      "name": "Tabagismo",
+      "cards": [
+        [
+          "Segundo a OMS, qual a importância do tabagismo no mundo?",
+          "É a principal causa previsível de morte e de doenças no mundo."
+        ],
+        [
+          "Como está a prevalência de tabagismo no Brasil?",
+          "Vem apresentando redução."
+        ],
+        [
+          "O que avaliar nos antecedentes pessoais, na entrevista inicial do tabagismo?",
+          "Transtorno de ansiedade, depressão ou histórico de abuso de drogas."
+        ],
+        [
+          "Além dos antecedentes, o que mais compõe a entrevista inicial do tabagismo?",
+          "História de saúde, exame físico e avaliação da dependência."
+        ],
+        [
+          "Qual escore avalia a dependência à nicotina?",
+          "Escore de Fagerström."
+        ],
+        [
+          "Como se calcula a carga tabágica?",
+          "Número de maços fumados por dia × anos de tabagismo."
+        ],
+        [
+          "Quais as etapas do ciclo de motivação para parar de fumar?",
+          "Pré-contemplativo → contemplativo → preparação para ação → ação → manutenção (ou recaída, podendo retornar ao pré-contemplativo)."
+        ],
+        [
+          "Como são estruturados os grupos de tratamento de tabagismo?",
+          "Muito efetivos; até 12 pessoas; 4 sessões semanais e 2 quinzenais, de 1 hora cada."
+        ],
+        [
+          "Quando se indica TCC individual (em vez de grupo) no tratamento do tabagismo?",
+          "Para pacientes que não se adaptaram ou não querem fazer os grupos."
+        ],
+        [
+          "O que são as crenças antecipatórias no tratamento do tabagismo?",
+          "Crenças de alívio e facilitadoras que o paciente tem sobre o cigarro, trabalhadas na terapia."
+        ],
+        [
+          "Quais critérios indicam tratamento farmacológico para parar de fumar?",
+          "Mais de 20 cigarros/dia, 1º cigarro em até 30 minutos após acordar, Fagerström >5, ou paciente que já tentou sem medicação e recaiu."
+        ],
+        [
+          "Quais os 2 tipos de medicamentos usados no tratamento farmacológico do tabagismo?",
+          "Reposição de nicotina (goma e adesivos) e não nicotínicos (bupropiona)."
+        ],
+        [
+          "Qual o padrão-ouro entre os medicamentos não nicotínicos para tabagismo?",
+          "Bupropiona."
+        ]
+      ]
+    }
+  ]
+}
